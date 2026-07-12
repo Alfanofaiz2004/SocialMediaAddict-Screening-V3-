@@ -37,7 +37,7 @@ export default function ArtikelPage() {
           </header>
 
           {/* ─── ISI ARTIKEL ─── */}
-          <div className="prose-lg md:prose-xl text-on-surface-variant leading-relaxed space-y-6 text-left">
+          <div className="prose-lg md:prose-xl text-on-surface-variant leading-relaxed space-y-6 text-justify [&_h2]:text-left [&_h3]:text-left">
             <p>
               Pernah nggak sih, kamu niatnya cuma mau ngecek TikTok, Instagram Reels, atau YouTube Shorts selama 5 menit aja... eh pas lihat jam, tahu-tahu udah subuh? Tenang, kamu nggak sendirian. Di era digital sekarang, algoritma super canggih bekerja siang-malam buat bikin kamu nggak bisa berhenti nge-<em>scroll</em>.
             </p>
