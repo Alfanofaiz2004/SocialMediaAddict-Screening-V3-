@@ -46,49 +46,49 @@ export const SVAS_QUESTIONS = [
     id: 1,
     key: 'Q1_salience',
     dimension: 'Salience',
-    text: 'Saya terus memikirkan video pendek (TikTok, Reels, Shorts) saat tidak sedang menontonnya.',
-    subtitle: 'Pikiran didominasi oleh konten video',
+    text: 'Aku sering kepikiran soal buka sosmed video pendek (Tiktok, Reels, Shorts). Padahal lagi nyoba buat nggak megang hp.',
+    subtitle: 'Fokus Utama',
     contoh: 'Misalnya: Lagi makan atau ngerjain tugas, tapi pikiran malah melayang pengen buka Sosmed.',
   },
   {
     id: 2,
     key: 'Q2_mood_modification',
     dimension: 'Mood Modification',
-    text: 'Saya menjadikan video pendek sebagai pelarian dari masalah atau saat suasana hati sedang buruk.',
-    subtitle: 'Penggunaan sebagai regulasi emosi negatif',
+    text: 'Aku sering jadiin sosmed video pendek buat ngubah mood, entah pas lagi banyak pikiran, butuh hiburan, atau sekadar pengen tenang.',
+    subtitle: 'Pengubah Suasana Hati',
     contoh: 'Misalnya: Lagi stres atau bete, pelarian utamanya langsung nge-scroll buat nenangin diri.',
   },
   {
     id: 3,
-    key: 'Q3_loss_of_control',
-    dimension: 'Loss of Control',
-    text: 'Saya merasa sulit untuk berhenti menonton video pendek meskipun saya sudah berniat untuk berhenti.',
-    subtitle: 'Ketidakmampuan mengontrol durasi',
-    contoh: 'Misalnya: Niatnya cuma scroll 5 menit, tapi tahu-tahu bablas sampai sejam dan susah buat stop.',
+    key: 'Q3_tolerance',
+    dimension: 'Tolerance',
+    text: 'Aku merasa butuh waktu nonton yang makin lama dari hari ke hari supaya puas.',
+    subtitle: 'Toleransi Waktu',
+    contoh: 'Misalnya: Niatnya cuma scroll 5 menit, tapi tahu-tahu bablas sampai sejam karena kurang puas.',
   },
   {
     id: 4,
-    key: 'Q4_withdrawal_sad',
+    key: 'Q4_withdrawal',
     dimension: 'Withdrawal',
-    text: 'Saya merasa sedih atau tertekan jika tidak bisa menonton video pendek untuk sementara waktu.',
-    subtitle: 'Gejala penarikan emosional',
+    text: 'Aku ngerasa gelisah, cemas, atau gampang bete kalau kebetulan lagi nggak bisa buka aplikasi video pendek.',
+    subtitle: 'Gelisah saat Berhenti',
     contoh: 'Misalnya: Pas kuota habis atau nggak ada sinyal, mood kamu langsung anjlok atau gampang bete.',
   },
   {
     id: 5,
-    key: 'Q5_negative_outcomes',
-    dimension: 'Negative Outcomes',
-    text: 'Saya kesulitan berkonsentrasi pada pekerjaan atau pelajaran akibat durasi menonton video pendek.',
-    subtitle: 'Dampak negatif pada produktivitas',
-    contoh: 'Misalnya: Tugas jadi sering telat atau numpuk gara-gara terus nunda buat nge-scroll HP.',
+    key: 'Q5_conflict',
+    dimension: 'Conflict',
+    text: 'Aku jadi sering punya masalah dengan orang lain, atau tugas dan kerjaanku jadi sering berantakan gara-gara nonton sosmed video pendek.',
+    subtitle: 'Konflik & Gangguan Hidup',
+    contoh: 'Misalnya: Tugas jadi sering telat atau sering dimarahi gara-gara terus nunda buat nge-scroll HP.',
   },
   {
     id: 6,
-    key: 'Q6_withdrawal_anxious',
-    dimension: 'Withdrawal',
-    text: 'Saya merasa cemas jika tidak menonton, dan kecemasan itu reda setelah saya menonton video pendek lagi.',
-    subtitle: 'Siklus kecemasan dan kelegaan semu',
-    contoh: 'Misalnya: Ngerasa gelisah atau takut ketinggalan tren (FOMO), dan baru tenang setelah buka sosmed lagi.',
+    key: 'Q6_relapse',
+    dimension: 'Relapse',
+    text: 'Aku udah berkali-kali nyoba ngurangin atau berhenti nonton, tapi pada akhirnya selalu gagal dan balik lagi ke kebiasaan lama.',
+    subtitle: 'Kambuh Kembali',
+    contoh: 'Misalnya: Udah niat banget ngurangin main HP, tapi besoknya bablas lagi nge-scroll seharian.',
   },
 ] as const;
 
@@ -106,69 +106,146 @@ export const SVAS_OPTIONS = [
 export const DOMINANT_EXPLANATIONS: Record<string, string> = {
   Q1_salience: 'Kamu sering terpaku pada pemikiran tentang video pendek bahkan saat tidak membuka aplikasi. Ini menandakan bahwa aplikasi telah merebut fokus kognitif kamu secara berkelanjutan.',
   Q2_mood_modification: 'Kamu sangat mengandalkan video pendek sebagai satu-satunya cara untuk mengatasi masalah emosional (seperti stres atau kesedihan), menghambat strategi penyelesaian masalah yang nyata.',
-  Q3_loss_of_control: 'Kamu mengalami kesulitan parah dalam menghentikan tontonan. Fitur algoritma aplikasi telah berhasil meredam kendali eksekutif otak kamu dalam membatasi waktu.',
-  Q4_withdrawal_sad: 'Tubuh dan pikiran kamu memberikan respon kesedihan (withdrawal) ketika stimulasi dari video pendek terputus. Ini merupakan tanda awal dari siklus adiksi psikologis.',
-  Q5_negative_outcomes: 'Konsentrasi kamu di dunia nyata terganggu secara signifikan. Video pendek telah menurunkan kemampuan kamu mempertahankan fokus (rentang perhatian) pada tugas-tugas penting.',
-  Q6_withdrawal_anxious: 'Kamu terjebak dalam siklus kecemasan. Kamu merasa cemas jika jauh dari video pendek, dan merasa lega saat menontonnya kembali, mengindikasikan adiksi dopaminergik yang kuat.',
+  Q3_tolerance: 'Kamu merasa perlu menambah durasi menonton dari waktu ke waktu untuk mendapatkan kepuasan yang sama. Ini adalah tanda toleransi yang mulai terbangun.',
+  Q4_withdrawal: 'Kamu merasa gelisah, cemas, atau tidak nyaman ketika tidak bisa mengakses video pendek. Ini merupakan tanda awal dari siklus adiksi psikologis.',
+  Q5_conflict: 'Kebiasaan menontonmu telah memicu konflik di dunia nyata, baik itu pertengkaran, terganggunya hubungan sosial, atau kacaunya produktivitas dan tugas.',
+  Q6_relapse: 'Kamu sudah mencoba untuk berhenti atau mengurangi menonton, tapi selalu gagal. Ini menunjukkan bahwa kamu mulai kehilangan kontrol atas kebiasaanmu.',
 };
 
 // ============================================================
 // Detailed Dimension Explanations (For Accordion UI)
 // ============================================================
-export const DIMENSION_DETAILS: Record<string, { basic: string; scale12: string; scale3: string; scale45: string; solusi12: string; solusi3: string; solusi45: string }> = {
+export const DIMENSION_DETAILS: Record<string, { basic: string; scale12: string; scale3: string; scale45: string; solusi12: string[]; solusi3: string[]; solusi45: string[] }> = {
   Q1_salience: {
-    basic: 'Salience (Dominasi Pikiran) adalah kondisi ketika media sosial menjadi hal yang sangat menonjol dalam pikiran, perasaan, dan aktivitas seseorang. Pengguna sering memikirkan media sosial, ingin segera mengecek notifikasi, atau merasa media sosial menjadi bagian utama dari rutinitas harian.',
+    basic: 'Salience (Fokus Utama) adalah kondisi ketika aktivitas menonton video pendek menjadi bagian yang paling dominan dalam kehidupan sehari-hari. Seseorang mulai memikirkan media sosial bahkan ketika sedang tidak menggunakannya. Keinginan untuk membuka aplikasi muncul secara terus-menerus sehingga perhatian terhadap aktivitas lain menjadi berkurang. Misalnya, ketika sedang belajar, bekerja, makan bersama keluarga, atau berkumpul dengan teman, pikiran tetap tertuju pada video-video terbaru yang ingin ditonton.',
     scale12: 'Penggunaan media sosial masih wajar. Pengguna tidak terlalu sering memikirkan media sosial dan masih mampu memprioritaskan aktivitas lain seperti belajar, bekerja, istirahat, atau berinteraksi langsung.',
     scale3: 'Media sosial mulai cukup sering muncul dalam pikiran atau kebiasaan harian. Pengguna mungkin sering mengecek media sosial saat bosan atau senggang, tetapi masih bisa mengendalikan diri.',
     scale45: 'Media sosial sudah menjadi pusat perhatian yang kuat. Pengguna sering merasa terdorong untuk membuka media sosial, bahkan saat sedang belajar, bekerja, beristirahat, atau melakukan aktivitas penting lain.',
-    solusi12: 'Jaga agar media sosial tetap menjadi aktivitas tambahan dengan menetapkan waktu penggunaan yang wajar (misalnya hanya saat istirahat). Matikan notifikasi yang tidak penting, biasakan tidak membuka media sosial langsung setelah bangun tidur, dan pertahankan aktivitas offline seperti belajar, olahraga, dan tidur yang cukup.',
-    solusi3: 'Tentukan jadwal untuk mengecek media sosial (misalnya 3-4 kali sehari) dan pindahkan aplikasi dari layar utama agar tidak dibuka secara otomatis. Gunakan mode fokus saat bekerja atau belajar, dan buatlah pengganti kebiasaan saat dorongan muncul seperti minum air atau berjalan.',
-    solusi45: 'Gunakan pemblokir aplikasi atau screen time limit yang tegas, dan buat "zona bebas ponsel" pada saat makan, ibadah, atau sebelum tidur. Lakukan pengurangan ini secara bertahap agar tidak menimbulkan rasa FOMO yang berlebihan, serta mintalah bantuan orang terdekat untuk mengingatkan.'
+    solusi12: [
+      'Jadikan media sosial sebatas hiburan tambahan saja, dan atur waktu penggunaannya agar tetap wajar.',
+      'Coba matikan notifikasi aplikasi yang kurang penting biar kamu nggak mudah terdistraksi.',
+      'Hindari kebiasaan langsung membuka media sosial begitu bangun tidur.',
+      'Tetap rutin lakukan aktivitas di dunia nyata, seperti belajar, berolahraga, dan pastikan jam tidurmu cukup.'
+    ],
+    solusi3: [
+      'Mulai tentukan jadwal khusus untuk mengecek media sosial, misalnya cukup 3-4 kali sehari saja.',
+      'Pindahkan aplikasi dari layar utamamu supaya tangan nggak otomatis membukanya.',
+      'Jangan ragu memakai fitur \'mode fokus\' di HP saat kamu sedang harus konsentrasi belajar atau bekerja.',
+      'Kalau tiba-tiba muncul dorongan kuat untuk membuka HP, alihkan perhatian dengan hal simpel seperti minum air putih atau berjalan sebentar.'
+    ],
+    solusi45: [
+      'Sudah saatnya kamu pasang batas waktu (screen time limit) yang tegas atau gunakan pemblokir aplikasi.',
+      'Tetapkan aturan "zona bebas ponsel" saat kamu sedang makan, beribadah, atau bersiap tidur.',
+      'Kurangi waktumu perlahan-lahan saja, supaya kamu nggak merasa ketinggalan zaman (FOMO) secara berlebihan.',
+      'Mintalah bantuan keluarga atau teman dekat untuk ikut menegur dan mengingatkanmu kalau sudah mulai berlebihan.'
+    ]
   },
   Q2_mood_modification: {
-    basic: 'Mood modification (Pelarian Emosi) berarti pengguna memakai media sosial untuk mengubah suasana hati, misalnya untuk menghilangkan stres, kesepian, bosan, sedih, atau cemas.',
+    basic: 'Mood Modification (Pengubah Suasana Hati) adalah kondisi ketika seseorang menggunakan media sosial sebagai cara utama untuk mengurangi stres, menghilangkan rasa bosan, mengatasi kesepian, atau memperbaiki suasana hati. Video pendek memberikan hiburan secara instan sehingga otak mulai menganggap aktivitas tersebut sebagai "pelarian" dari masalah.',
     scale12: 'Pengguna mungkin memakai media sosial untuk hiburan, tetapi tidak menjadikannya cara utama untuk mengatasi emosi negatif.',
     scale3: 'Pengguna cukup sering membuka media sosial saat sedang bosan, stres, atau tidak nyaman secara emosional. Namun, pengguna masih memiliki cara lain untuk mengatur suasana hati.',
     scale45: 'Pengguna sangat bergantung pada media sosial untuk merasa lebih baik. Saat sedih, cemas, bosan, atau kesepian, media sosial menjadi pelarian utama dan sulit digantikan oleh aktivitas lain.',
-    solusi12: 'Gunakan media sosial sebagai hiburan ringan dan bukan sebagai pelarian. Pertahankan mekanisme coping yang sehat seperti olahraga, tidur yang cukup, dan hobi, serta kenali emosi kamu terlebih dahulu sebelum membuka media sosial.',
-    solusi3: 'Terapkan jeda 5-10 menit sebelum membuka aplikasi saat emosi sedang negatif, dan cobalah mengenali emosi yang muncul (bosan, sedih, atau lelah). Lakukan aktivitas non-digital terlebih dahulu seperti menarik napas atau jalan kaki, serta kurasi konten yang memicu perbandingan sosial.',
-    solusi45: 'Kurangi penggunaan saat emosi sedang negatif dan hindari doomscrolling. Buatlah daftar "coping darurat" non-digital seperti menghubungi teman atau berolahraga. Jika rasa cemas terus-menerus muncul, pertimbangkan untuk mencari bantuan dari konselor.'
+    solusi12: [
+      'Gunakan media sosial sekadar untuk hiburan santai, bukan sebagai pelarian utama saat suasana hati sedang buruk.',
+      'Lakukan cara yang lebih sehat untuk melepas penat, seperti berolahraga, melakukan hobi, atau sekadar tidur cukup.',
+      'Kenali dulu emosi dan perasaanmu sendiri sebelum memutuskan untuk tenggelam di media sosial.'
+    ],
+    solusi3: [
+      'Biasakan memberi jeda 5-10 menit sebelum membuka aplikasi, terutama saat kamu sedang merasa bad mood atau sedih.',
+      'Sadari dulu apa yang sedang kamu rasakan (apakah hanya bosan, lelah, atau memang sedang stres).',
+      'Coba tenangkan diri tanpa layar HP dulu, misalnya dengan menarik napas panjang atau jalan kaki sebentar di luar.',
+      'Mulai kurangi atau unfollow konten-konten yang justru bikin kamu suka membanding-bandingkan diri dengan orang lain.'
+    ],
+    solusi45: [
+      'Sebisa mungkin hindari scrolling terus-menerus (doomscrolling) saat pikiranmu sedang penat atau stres.',
+      'Buat alternatif kegiatan lain saat kamu butuh pelarian, misalnya langsung mengobrol santai dengan teman atau pergi berolahraga.',
+      'Kalau rasa cemas dan gelisahmu masih terus mengganggu, nggak ada salahnya lho untuk mengobrol dengan psikolog atau konselor profesional.'
+    ]
   },
-  Q3_loss_of_control: {
-    basic: 'Loss of control (Hilang Kendali) adalah kondisi ketika pengguna sulit membatasi atau menghentikan penggunaan media sosial, meskipun sudah berniat untuk mengurangi atau berhenti.',
-    scale12: 'Pengguna masih mampu mengontrol durasi penggunaan. Jika berniat berhenti atau membatasi waktu, pengguna umumnya bisa melakukannya.',
-    scale3: 'Pengguna kadang kehilangan kontrol, misalnya berniat membuka media sosial sebentar tetapi akhirnya memakai lebih lama dari rencana. Namun, kondisi ini belum selalu terjadi.',
-    scale45: 'Pengguna sering gagal mengontrol penggunaan media sosial. Walaupun sadar sudah terlalu lama atau sedang memiliki kewajiban lain, pengguna tetap sulit berhenti.',
-    solusi12: 'Tentukan tujuan yang jelas sebelum membuka aplikasi dan hindari scrolling tanpa tujuan. Gunakan timer ringan agar durasi tidak bertambah tanpa sadar dan cek laporan screen time secara berkala.',
-    solusi3: 'Gunakan alarm atau batas waktu per aplikasi dan terapkan aturan untuk menyelesaikan tugas terlebih dahulu sebelum membuka media sosial. Kamu juga dapat menggunakan teknik Pomodoro dan logout dari aplikasi yang paling sering dibuka tanpa sadar.',
-    solusi45: 'Gunakan aplikasi pemblokir yang terkunci pada jam-jam tertentu dan hapus sementara aplikasi yang paling sulit dikendalikan. Simpan ponsel di luar jangkauan saat sedang belajar atau tidur, dan mintalah orang terdekat untuk membantu memantau target kamu.'
+  Q3_tolerance: {
+    basic: 'Tolerance (Toleransi Waktu) adalah kondisi ketika seseorang membutuhkan waktu penggunaan media sosial yang semakin lama untuk memperoleh kepuasan yang sama. Jika sebelumnya merasa puas setelah menonton selama 15 menit, lama-kelamaan durasi tersebut meningkat menjadi satu jam, dua jam, bahkan lebih.',
+    scale12: 'Pengguna masih merasa puas dengan durasi menonton yang sama dari waktu ke waktu.',
+    scale3: 'Pengguna kadang merasa perlu menambah sedikit durasi menonton untuk merasa terhibur.',
+    scale45: 'Pengguna harus menonton lebih lama secara signifikan karena durasi yang sebelumnya tidak lagi memberikan kepuasan.',
+    solusi12: [
+      'Ketahui dengan jelas apa tujuanmu membuka aplikasi, supaya kamu nggak cuma scrolling tanpa arah.',
+      'Sesekali pasang timer atau alarm agar kamu sadar sudah berapa lama kamu memegang HP.',
+      'Coba biasakan mengecek laporan screen time mingguanmu di HP agar tetap terkontrol.'
+    ],
+    solusi3: [
+      'Mulai gunakan fitur pembatas waktu untuk aplikasi-aplikasi yang bikin kamu lupa waktu.',
+      'Biasakan mendisiplinkan diri untuk menyelesaikan tugas atau pekerjaan penting dulu sebelum bebas mengecek media sosial.',
+      'Gunakan metode Pomodoro (fokus belajar dengan jeda istirahat), dan cobalah logout dari aplikasi favoritmu supaya kamu nggak otomatis membukanya.'
+    ],
+    solusi45: [
+      'Jangan ragu untuk mengatur aplikasi pemblokir otomatis yang mengunci HP-mu pada jam-jam rawan.',
+      'Kalau dirasa perlu, hapus saja dulu aplikasi yang paling sering bikin kamu candu untuk sementara waktu.',
+      'Taruh ponsel agak jauh dari pandanganmu saat kamu butuh konsentrasi penuh atau saat mau tidur.',
+      'Libatkan orang di sekitarmu untuk bantu memantau targetmu mengurangi waktu bermain HP.'
+    ]
   },
-  Q4_withdrawal_sad: {
-    basic: 'Withdrawal (Perasaan Tidak Nyaman) adalah perasaan tidak nyaman yang muncul ketika pengguna tidak bisa mengakses atau mengurangi penggunaan media sosial. Bentuknya bisa berupa gelisah, sedih, atau terus ingin mengecek akun.',
-    scale12: 'Pengguna tetap merasa nyaman saat tidak membuka media sosial. Tidak ada rasa sedih atau tertekan yang berarti ketika jauh dari media sosial.',
-    scale3: 'Pengguna mulai merasa kurang nyaman jika tidak membuka media sosial dalam waktu tertentu. Ada rasa sedih atau bosan, tetapi masih bisa dikendalikan.',
-    scale45: 'Pengguna merasa sangat tidak nyaman saat tidak bisa membuka media sosial. Rasa sedih, tertekan, atau dorongan untuk mengecek media sosial cukup kuat dan dapat mengganggu keseharian.',
-    solusi12: 'Biasakan untuk memiliki periode pendek tanpa ponsel, misalnya saat makan atau mandi. Jangan selalu membawa ponsel ke setiap aktivitas dan latihlah kebiasaan menunggu tanpa langsung membuka aplikasi.',
-    solusi3: 'Mulailah dengan memberi jeda 15-30 menit tanpa media sosial lalu tingkatkan secara perlahan. Lakukan teknik grounding saat merasa gelisah (seperti menarik napas dalam), dan tetapkan jadwal mengecek media sosial untuk meredam rasa penasaran kamu.',
-    solusi45: 'Lakukan pengurangan secara bertahap, misalnya mengurangi 15-30 menit per hari, dan ganti akses media sosial dengan aktivitas yang menenangkan. Hindari melakukan detox secara mendadak jika hal tersebut justru memicu rasa cemas yang berlebih.'
+  Q4_withdrawal: {
+    basic: 'Withdrawal (Gelisah saat Berhenti) adalah munculnya perasaan tidak nyaman ketika tidak dapat mengakses media sosial. Perasaan tersebut dapat berupa gelisah, bosan, mudah marah, atau cemas ketika akses terhadap aplikasi dibatasi. Perlu dipahami bahwa pada kecanduan perilaku, withdrawal lebih banyak berupa gejala psikologis, bukan gejala fisik seperti pada ketergantungan zat.',
+    scale12: 'Pengguna tetap merasa nyaman dan tenang saat tidak membuka media sosial.',
+    scale3: 'Pengguna mulai merasa kurang nyaman atau sedikit gelisah jika tidak membuka media sosial dalam waktu tertentu.',
+    scale45: 'Pengguna merasa sangat gelisah, cemas, atau tidak nyaman saat tidak bisa mengakses video pendek yang dapat mengganggu keseharian.',
+    solusi12: [
+      'Biasakan luangkan waktu sejenak tanpa memegang HP sama sekali, misalnya waktu lagi asyik makan atau mandi.',
+      'Sadari bahwa nggak semua kegiatan mengharuskanmu terus mengantongi HP.',
+      'Cobalah tahan diri sebentar saat sedang menunggu sesuatu, tanpa langsung refleks membuka aplikasi.'
+    ],
+    solusi3: [
+      'Latihlah dirimu untuk tidak menyentuh media sosial selama 15-30 menit sehari, dan naikkan batas waktunya secara perlahan.',
+      'Kalau kamu mulai merasa gelisah karena terlepas dari HP, coba tenangkan dirimu (misalnya dengan menarik napas panjang dan teratur).',
+      'Atur jam berapa saja kamu boleh mengecek notifikasi, supaya rasa penasaranmu tidak menumpuk dan bisa lebih terkontrol.'
+    ],
+    solusi45: [
+      'Jangan terburu-buru, kurangi saja waktumu bermain HP sedikit demi sedikit, misalnya turunkan target 15-30 menit setiap harinya.',
+      'Cari aktivitas seru atau menenangkan lainnya untuk menggantikan posisi media sosial di keseharianmu.',
+      'Hindari langsung berhenti total dari media sosial secara mendadak, karena itu malah bisa bikin kamu makin cemas dan stres.'
+    ]
   },
-  Q5_negative_outcomes: {
-    basic: 'Negative outcomes (Dampak Negatif) adalah dampak negatif yang muncul akibat penggunaan media sosial, misalnya terganggunya tidur, belajar, pekerjaan, hubungan sosial, kesehatan mental, atau tanggung jawab sehari-hari.',
-    scale12: 'Penggunaan media sosial belum memberikan dampak negatif yang berarti. Aktivitas utama seperti belajar, bekerja, tidur, dan hubungan sosial masih berjalan baik.',
-    scale3: 'Dampak negatif mulai muncul sesekali, misalnya menunda tugas, tidur lebih larut, kurang fokus, atau merasa kurang produktif karena media sosial.',
-    scale45: 'Media sosial sudah memberikan dampak negatif yang cukup jelas dan berulang. Pengguna mungkin sering mengabaikan tugas, kurang tidur, mengalami penurunan produktivitas, atau konflik.',
-    solusi12: 'Pertahankan waktu tidur yang cukup dan hindari penggunaan media sosial saat sedang belajar, bekerja, atau berkendara. Pilihlah konten yang mendukung suasana hati dan tidak membuat kamu merasa stres.',
-    solusi3: 'Jika tidur terganggu, hentikan penggunaan media sosial 60 menit sebelum tidur. Jika fokus belajar terganggu, gunakan mode fokus dan jauhkan ponsel kamu. Batasi atau unfollow akun-akun yang memicu kecemasan.',
-    solusi45: 'Buatlah rencana pengurangan durasi yang jelas serta prioritaskan tidur, aktivitas akademik, dan hubungan sosial kamu. Gunakan pemblokir aplikasi pada malam hari, dan pertimbangkan untuk meminta bantuan ahli jika terjadi insomnia atau isolasi sosial.'
+  Q5_conflict: {
+    basic: 'Conflict (Konflik & Gangguan Hidup) terjadi ketika penggunaan media sosial mulai mengganggu tanggung jawab, hubungan sosial, maupun aktivitas sehari-hari. Konflik dapat terjadi dengan diri sendiri karena merasa bersalah telah menghabiskan banyak waktu, maupun dengan orang lain akibat penggunaan media sosial yang berlebihan.',
+    scale12: 'Penggunaan media sosial belum menyebabkan konflik atau masalah yang berarti di dunia nyata.',
+    scale3: 'Mulai muncul gangguan kecil seperti menunda tugas penting atau teguran dari orang terdekat karena terlalu sering bermain HP.',
+    scale45: 'Kebiasaan menonton telah memicu pertengkaran serius atau mengacaukan produktivitas dan hubungan sosial secara signifikan.',
+    solusi12: [
+      'Jaga selalu pola tidurmu agar tetap cukup dan teratur setiap harinya.',
+      'Berusahalah untuk sama sekali tidak melirik media sosial saat sedang serius belajar, bekerja, ataupun berkendara.',
+      'Selektiflah memilih konten; ikuti hal-hal yang bikin suasana hati membaik dan tinggalkan yang bikin kamu jadi pusing sendiri.'
+    ],
+    solusi3: [
+      'Kalau tidurmu mulai kacau, wajibkan dirimu untuk mematikan media sosial minimal satu jam sebelum masuk kamar tidur.',
+      'Saat pekerjaan menumpuk, manfaatkan mode fokus di HP dan taruh ponsel sedikit lebih jauh dari jangkauan tanganmu.',
+      'Mulailah membatasi atau langsung unfollow akun-akun yang sering kali memancing emosi atau merusak konsentrasimu.'
+    ],
+    solusi45: [
+      'Susun komitmen yang jelas untuk mengurangi jam main HP, serta utamakan kesehatan tidur, urusan kampus/pekerjaan, dan pertemananmu.',
+      'Cobalah mengatur ponselmu agar otomatis memblokir aplikasi hiburan saat sudah larut malam.',
+      'Jika kondisinya membuatmu sulit tidur parah hingga menjauh dari lingkungan sosial, jangan ragu untuk mencari bantuan dari ahli.'
+    ]
   },
-  Q6_withdrawal_anxious: {
-    basic: 'Tolerance/Withdrawal (Kecemasan) adalah kondisi dimana pengguna perlu menambah durasi penggunaan, atau munculnya rasa cemas/gelisah saat tidak membuka media sosial yang hanya mereda setelah membukanya kembali.',
-    scale12: 'Pengguna belum merasa perlu menambah durasi dan tetap tenang saat jauh dari media sosial.',
-    scale3: 'Pengguna mulai butuh waktu lebih lama atau merasa gelisah jika tidak mengecek media sosial secara berkala.',
-    scale45: 'Pengguna terjebak dalam siklus. Merasa butuh durasi lebih lama, atau cemas kuat saat tidak menonton dan butuh menonton untuk meredakannya.',
-    solusi12: 'Pantau waktu layar (screen time) kamu secara mingguan dan hindari mengunduh aplikasi adiktif yang baru. Tetapkan batas yang wajar secara khusus untuk menonton konten video pendek.',
-    solusi3: 'Kurangi durasi secara bertahap sekitar 10-20% setiap minggunya, dan identifikasi serta batasi jenis konten yang paling menyita waktu. Gantilah waktu layar tersebut dengan menyalurkan hobi atau berinteraksi sosial secara langsung.',
-    solusi45: 'Buatlah target pengurangan durasi mingguan yang terukur secara jelas. Hapus sementara aplikasi yang paling adiktif jika batasan biasa selalu gagal ditaati, dan jadwalkan aktivitas offline yang mampu memberikan rasa pencapaian bagi kamu.'
+  Q6_relapse: {
+    basic: 'Relapse (Kambuh Kembali) adalah kondisi ketika seseorang kembali menggunakan media sosial secara berlebihan setelah sebelumnya berhasil mengurangi atau menghentikan penggunaannya. Kondisi ini umum terjadi dalam proses perubahan perilaku dan bukan berarti seluruh usaha sebelumnya gagal.',
+    scale12: 'Pengguna masih mampu menahan diri dan konsisten dengan batasan waktu yang telah dibuat.',
+    scale3: 'Pengguna kadang melanggar janji sendiri untuk mengurangi durasi, tetapi masih mencoba untuk memperbaikinya.',
+    scale45: 'Pengguna selalu gagal setiap kali mencoba mengurangi waktu menonton dan terus terjebak di pola yang sama.',
+    solusi12: [
+      'Biasakan melirik catatan waktu layar (screen time) di ponselmu setiap akhir pekan sebagai bahan evaluasi.',
+      'Tahan godaan untuk mengunduh aplikasi-aplikasi hiburan baru yang rawan bikin candu.',
+      'Buat batasan pribadi yang realistis, terutama untuk durasi scroll konten video pendek yang sering bikin lupa waktu.'
+    ],
+    solusi3: [
+      'Terus turunkan target bermain ponselmu perlahan, sekitar 10-20% setiap minggunya agar tubuh dan pikiranmu lebih mudah beradaptasi.',
+      'Coba sadari jenis konten seperti apa yang paling banyak membuang waktumu, lalu mulai batasi konsumsinya.',
+      'Gantikan jam layar tersebut dengan kesibukan yang lebih bermanfaat, seperti melakukan hobi baru atau sekadar nongkrong bersama teman.'
+    ],
+    solusi45: [
+      'Buatlah target mingguan yang terukur dan realistis supaya niatmu mengurangi kecanduan bisa lebih konsisten terwujud.',
+      'Kalau batasan waktu terasa nggak mempan, kumpulkan keberanian untuk menghapus sementara aplikasi yang paling bikin candu tersebut.',
+      'Sengaja jadwalkan kegiatan offline yang bisa kasih kamu rasa bangga saat menyelesaikannya, agar perlahan menjauh dari layar HP.'
+    ]
   }
 };
 

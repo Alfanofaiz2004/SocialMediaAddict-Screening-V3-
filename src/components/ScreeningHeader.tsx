@@ -13,24 +13,30 @@ export default function ScreeningHeader() {
         <nav className="hidden md:flex gap-6 h-full items-center w-1/3">
           <Link
             href="/homepage"
-            className={`font-label-md text-sm h-full flex items-center transition-all duration-200 border-b-2 ${
-              pathname === '/homepage' ? 'text-primary border-primary' : 'text-on-surface-variant border-transparent hover:text-primary'
+            className={`relative font-semibold text-base transition-all duration-300 pb-1 ${
+              pathname === '/homepage' ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+            } after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-primary after:transition-transform after:duration-300 after:origin-center ${
+              pathname === '/homepage' ? 'after:scale-x-100' : 'after:scale-x-0 hover:after:scale-x-100'
             }`}
           >
             Beranda
           </Link>
           <Link
             href="/homepage/kuesioner"
-            className={`font-label-md text-sm h-full flex items-center transition-all duration-200 border-b-2 ${
-              pathname?.startsWith('/homepage/kuesioner') ? 'text-primary border-primary' : 'text-on-surface-variant border-transparent hover:text-primary'
+            className={`relative font-semibold text-base transition-all duration-300 pb-1 ${
+              pathname?.startsWith('/homepage/kuesioner') ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+            } after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-primary after:transition-transform after:duration-300 after:origin-center ${
+              pathname?.startsWith('/homepage/kuesioner') ? 'after:scale-x-100' : 'after:scale-x-0 hover:after:scale-x-100'
             }`}
           >
             Screening
           </Link>
           <Link
             href="/homepage/artikel"
-            className={`font-label-md text-sm h-full flex items-center transition-all duration-200 border-b-2 ${
-              pathname?.startsWith('/homepage/artikel') ? 'text-primary border-primary' : 'text-on-surface-variant border-transparent hover:text-primary'
+            className={`relative font-semibold text-base transition-all duration-300 pb-1 ${
+              pathname?.startsWith('/homepage/artikel') ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+            } after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-primary after:transition-transform after:duration-300 after:origin-center ${
+              pathname?.startsWith('/homepage/artikel') ? 'after:scale-x-100' : 'after:scale-x-0 hover:after:scale-x-100'
             }`}
           >
             Tentang Tes

@@ -263,7 +263,7 @@ export function DimensionAccordion({ criteria }: { criteria: { key: string; labe
       </div>
       <div className="flex flex-col gap-3">
         {criteria.map((c, i) => {
-          const detail = DIMENSION_DETAILS[c.key as keyof typeof DIMENSION_DETAILS];
+          const detail = DIMENSION_DETAILS[c.key as keyof typeof DIMENSION_DETAILS] as any;
           if (!detail) return null;
           const isOpen = openIndex === i;
 
@@ -327,9 +327,10 @@ export function DimensionAccordion({ criteria }: { criteria: { key: string; labe
                   >
                     <div className="p-5 pt-0 print:pt-5 border-t border-outline-variant/30 text-base text-on-surface-variant flex flex-col gap-4 bg-surface-container-lowest leading-relaxed">
                       <div className="mt-4 print:mt-0">
-                        <span className="font-bold text-on-surface block mb-2 text-lg">Penjelasan Dasar:</span>
+                        <span className="font-bold text-on-surface block mb-2 text-lg">Pengertian:</span>
                         {detail.basic}
                       </div>
+
                       <div
                         className="p-4 bg-surface-variant/20 rounded-lg border-l-[6px]"
                         style={{ borderColor: colorCode }}
@@ -345,9 +346,12 @@ export function DimensionAccordion({ criteria }: { criteria: { key: string; labe
                               <span className="material-symbols-outlined text-[20px]" style={{ color: colorCode }}>lightbulb</span>
                               Solusi & Rekomendasi
                             </span>
-                            <p className="mt-2 text-base text-on-surface-variant leading-relaxed">
-                              {solusiDesc}
-                            </p>
+                            <ul className="list-disc pl-5 mt-2 space-y-1 text-base text-on-surface-variant leading-relaxed">
+                              {Array.isArray(solusiDesc) 
+                                ? solusiDesc.map((item: string, idx: number) => <li key={idx}>{item}</li>)
+                                : <li>{solusiDesc}</li>
+                              }
+                            </ul>
                           </div>
                         )}
                       </div>

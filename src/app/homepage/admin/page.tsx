@@ -102,7 +102,7 @@ export default function AdminDashboard() {
     const headers = [
       'ID', 'Date', 'User Name', 'Zone', 'Score %', 'SVAS Total',
       'Total Duration (hrs)', 'Sleep (hrs)', 'Productivity Impact',
-      'Q1 (Salience)', 'Q2 (Mood)', 'Q3 (Control)', 'Q4 (Withdrawal)', 'Q5 (Outcomes)', 'Q6 (Anxiety)'
+      'Q1 (Salience)', 'Q2 (Mood)', 'Q3 (Tolerance)', 'Q4 (Withdrawal)', 'Q5 (Conflict)', 'Q6 (Relapse)'
     ];
     const rows = filteredResults.map(r => {
       const dateStr = new Date(r.createdAt).toLocaleString();

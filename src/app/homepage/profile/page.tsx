@@ -210,48 +210,15 @@ export default function ProfilePage() {
           {history && history.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="border-b border-outline-variant bg-surface-container-low text-on-surface-variant font-label-sm uppercase tracking-wider">
-                <th className="p-4">Tanggal</th>
-                <th className="p-4">Nama</th>
-                <th className="p-4 text-center">Jawaban (Q1-Q6)</th>
-                <th className="p-4 text-center">S-VAS</th>
-                <th className="p-4">Zona</th>
-                <th className="p-4">Skor</th>
-                <th className="p-4 text-center">Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              {history.length === 0 ? (
-                <tr><td colSpan={6} className="p-lg text-center text-on-surface-variant">Tidak ada rekaman tes ditemukan.</td></tr>
-              ) : (
-                history.map((r) => (
-                  <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-lowest/50 transition-colors">
-                    <td className="p-4 whitespace-nowrap text-sm text-on-surface-variant">{new Date(r.createdAt).toLocaleDateString()} {new Date(r.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</td>
-                    <td className="p-4 font-medium text-on-surface">{r.userName}</td>
-                    <td className="p-4">
-                      {r.input.svasScores && r.input.svasScores.length > 0 ? (
-                        <div className="flex justify-center gap-1">
-                          {r.input.svasScores.map((score: number, i: number) => (
-                            <span key={i} className={`w-6 h-6 flex items-center justify-center rounded text-[11px] font-bold ${
-                              score >= 4 ? 'bg-error/10 text-error' :
-                              score === 3 ? 'bg-[#f59e0b]/10 text-[#d97706]' :
-                              'bg-primary/10 text-primary'
-                            }`} title={`Q${i+1}: ${score}`}>
-                              {score}
-                            </span>
-                          ))}
-                        </div>
-                      ) : (
-                        <div className="text-center text-xs text-on-surface-variant italic">-</div>
-                      )}
-                    </td>
-                    <td className="p-4 text-center text-on-surface-variant">{r.result.svasTotal || '-'}/30</td>
-                    <td className="p-4">
-                      <span className={`px-2 py-1 rounded text-xs font-bold uppercase tracking-wider ${
-                        r.result.zone === 'NORMAL' ? 'bg-[#d1fae5] text-[#065f46]' : 
-                        r.result.zone === 'BERISIKO' ? 'bg-[#fef3c7] text-[#92400e]' : 
-            <tbody className="divide-y divide-outline-variant/50">
+                <thead>
+                  <tr className="border-b border-outline-variant text-on-surface-variant font-medium text-sm uppercase tracking-wider bg-surface-variant/20">
+                    <th className="p-5">Tanggal</th>
+                    <th className="p-5">Zona</th>
+                    <th className="p-5">Tingkat Kecanduan</th>
+                    <th className="p-5 text-right">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-outline-variant/50">
               {history.map((h: any, idx: number) => {
                 const zoneInfo = ZONES[h.result.zone as ZoneType] || ZONES['NORMAL'];
                 return (

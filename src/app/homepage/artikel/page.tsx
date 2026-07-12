@@ -67,51 +67,215 @@ export default function ArtikelPage() {
 
             <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">psychology</span>
-              1. Salience
+              1. Fokus Utama (Salience)
             </h3>
             <p>
-              Indikator pertama ini terjadi di mana pikiranmu terus-menerus terfokus pada konten video pendek. Biarpun aplikasinya lagi ditutup atau kamu lagi nongkrong bareng temen, otakmu terus mengarah ke keinginan buat segera buka HP dan lanjut nge-<em>scroll</em>.
+              Salience adalah kondisi ketika aktivitas menonton video pendek menjadi bagian yang paling dominan dalam kehidupan sehari-hari. Seseorang mulai memikirkan media sosial bahkan ketika sedang tidak menggunakannya. Keinginan untuk membuka aplikasi muncul secara terus-menerus sehingga perhatian terhadap aktivitas lain menjadi berkurang.
             </p>
-
-            <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
-              <span className="material-symbols-outlined text-primary text-[32px]">update</span>
-              2. Tolerance
-            </h3>
-            <p>
-              Mencerminkan kebutuhan waktu menonton yang terus meningkat. Dulu mungkin nonton video pendek 15 menit udah cukup menghibur, sekarang durasinya jadi bengkak berjam-jam cuma buat dapetin rasa puas yang sama kayak dulu.
+            <p className="mt-2 text-on-surface-variant/80 italic">
+              Misalnya, ketika sedang belajar, bekerja, makan bersama keluarga, atau berkumpul dengan teman, pikiran tetap tertuju pada video-video terbaru yang ingin ditonton.
             </p>
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+              <div>
+                <strong className="text-primary block mb-1">Contoh perilaku:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Sering membuka TikTok tanpa tujuan tertentu.</li>
+                  <li>Merasa ada yang kurang jika belum membuka media sosial.</li>
+                  <li>Sulit berkonsentrasi karena terus memikirkan konten terbaru.</li>
+                  <li>Secara otomatis membuka aplikasi setiap kali merasa bosan.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-error block mb-1">Dampak:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Konsentrasi menurun & produktivitas berkurang.</li>
+                  <li>Sulit menyelesaikan pekerjaan.</li>
+                  <li>Hubungan sosial mulai terganggu.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-secondary block mb-1">Cara mengatasinya:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Tentukan waktu khusus untuk membuka media sosial.</li>
+                  <li>Matikan notifikasi aplikasi yang tidak penting.</li>
+                  <li>Letakkan aplikasi media sosial pada folder tersembunyi agar tidak mudah dibuka.</li>
+                  <li>Isi waktu luang dengan aktivitas lain seperti membaca buku, berolahraga, atau berbicara dengan keluarga.</li>
+                </ul>
+              </div>
+            </div>
 
             <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">mood</span>
-              3. Mood Modification
+              2. Pengubah Suasana Hati (Mood Modification)
             </h3>
             <p>
-              Di tahap ini, video pendek digunakan secara aktif sebagai sarana pelarian untuk menghilangkan stres. Saat ada masalah, panik, atau sedih, pelarian utamamu adalah ngebuka medsos untuk mematikan perasaan-perasaan negatif tersebut.
+              Mood Modification adalah kondisi ketika seseorang menggunakan media sosial sebagai cara utama untuk mengurangi stres, menghilangkan rasa bosan, mengatasi kesepian, atau memperbaiki suasana hati. Video pendek memberikan hiburan secara instan sehingga otak mulai menganggap aktivitas tersebut sebagai "pelarian" dari masalah.
             </p>
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+              <div>
+                <strong className="text-primary block mb-1">Contoh perilaku:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Membuka TikTok setiap kali merasa sedih.</li>
+                  <li>Menonton Reels saat sedang stres.</li>
+                  <li>Menggunakan media sosial ketika merasa kesepian.</li>
+                  <li>Sulit merasa tenang tanpa menonton video.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-error block mb-1">Dampak:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Ketergantungan emosional terhadap media sosial.</li>
+                  <li>Kesulitan mengelola emosi secara sehat.</li>
+                  <li>Masalah yang sebenarnya tidak pernah diselesaikan.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-secondary block mb-1">Cara mengatasinya:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Cobalah teknik relaksasi seperti pernapasan dalam.</li>
+                  <li>Berjalan santai selama 15–30 menit.</li>
+                  <li>Mendengarkan musik atau menulis jurnal harian.</li>
+                  <li>Berbicara dengan teman atau keluarga yang dipercaya.</li>
+                </ul>
+              </div>
+            </div>
 
             <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
-              <span className="material-symbols-outlined text-primary text-[32px]">sync_problem</span>
-              4. Relapse
+              <span className="material-symbols-outlined text-primary text-[32px]">update</span>
+              3. Toleransi Waktu (Tolerance)
             </h3>
             <p>
-              Indikator yang menggambarkan kegagalan individu saat mencoba mengurangi durasi menonton. Udah niat ngurangin <em>screen time</em> atau bahkan nge-<em>uninstall</em> aplikasinya, eh besoknya dibongkar lagi. Ini tanda hilangnya kendali diri.
+              Tolerance adalah kondisi ketika seseorang membutuhkan waktu penggunaan media sosial yang semakin lama untuk memperoleh kepuasan yang sama. Jika sebelumnya merasa puas setelah menonton selama 15 menit, lama-kelamaan durasi tersebut meningkat menjadi satu jam, dua jam, bahkan lebih.
             </p>
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+              <div>
+                <strong className="text-primary block mb-1">Contoh perilaku:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Durasi penggunaan terus bertambah.</li>
+                  <li>Sulit berhenti setelah satu video.</li>
+                  <li>Selalu berkata "sebentar lagi" tetapi akhirnya menonton jauh lebih lama.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-error block mb-1">Dampak:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Waktu belajar dan tidur terganggu.</li>
+                  <li>Aktivitas fisik dan produktivitas menurun.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-secondary block mb-1">Cara mengatasinya:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Gunakan fitur Screen Time atau Digital Wellbeing.</li>
+                  <li>Pasang batas penggunaan harian.</li>
+                  <li>Gunakan teknik Pomodoro saat belajar.</li>
+                  <li>Letakkan ponsel jauh dari tempat belajar atau bekerja.</li>
+                </ul>
+              </div>
+            </div>
 
             <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">sick</span>
-              5. Withdrawal
+              4. Gelisah saat Berhenti (Withdrawal)
             </h3>
             <p>
-              Sensasi <em>sakaw</em> digital. Yaitu munculnya perasaan negatif (kayak cemas, gelisah, atau gampang marah) saat kamu nggak bisa mengakses aplikasi. Entah gara-gara kuota habis, nggak ada sinyal, atau baterai HP mati.
+              Withdrawal adalah munculnya perasaan tidak nyaman ketika tidak dapat mengakses media sosial. Perasaan tersebut dapat berupa gelisah, bosan, mudah marah, atau cemas ketika akses terhadap aplikasi dibatasi. Perlu dipahami bahwa pada kecanduan perilaku, withdrawal lebih banyak berupa gejala psikologis, bukan gejala fisik seperti pada ketergantungan zat.
             </p>
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+              <div>
+                <strong className="text-primary block mb-1">Contoh perilaku:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Gelisah saat ponsel tertinggal.</li>
+                  <li>Terus memikirkan media sosial ketika tidak ada internet.</li>
+                  <li>Mudah marah ketika diminta berhenti menggunakan ponsel.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-error block mb-1">Dampak:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Konsentrasi terganggu.</li>
+                  <li>Emosi menjadi tidak stabil.</li>
+                  <li>Sulit menikmati aktivitas tanpa media sosial.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-secondary block mb-1">Cara mengatasinya:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Kurangi durasi penggunaan secara bertahap.</li>
+                  <li>Mulailah dengan periode bebas gawai selama 30–60 menit setiap hari.</li>
+                  <li>Lakukan aktivitas yang tidak melibatkan layar, seperti membaca atau berolahraga.</li>
+                  <li>Mintalah dukungan keluarga atau teman agar proses pengurangan konsisten.</li>
+                </ul>
+              </div>
+            </div>
 
             <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">gavel</span>
-              6. Conflict
+              5. Konflik & Gangguan Hidup (Conflict)
             </h3>
             <p>
-              Ditandai dengan terganggunya kewajiban dan tanggung jawab. Entah itu urusan tugas akademik/pekerjaan yang terbengkalai, maupun hubungan sosial di dunia nyata yang rusak akibat aktivitas menonton video pendek yang kelewatan batas.
+              Conflict terjadi ketika penggunaan media sosial mulai mengganggu tanggung jawab, hubungan sosial, maupun aktivitas sehari-hari. Konflik dapat terjadi dengan diri sendiri karena merasa bersalah telah menghabiskan banyak waktu, maupun dengan orang lain akibat penggunaan media sosial yang berlebihan.
             </p>
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+              <div>
+                <strong className="text-primary block mb-1">Contoh perilaku:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Nilai akademik menurun atau pekerjaan tertunda.</li>
+                  <li>Sering mengabaikan keluarga.</li>
+                  <li>Bertengkar karena terlalu sering bermain ponsel.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-error block mb-1">Dampak:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Prestasi menurun dan hubungan sosial memburuk.</li>
+                  <li>Stres meningkat dan muncul rasa bersalah.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-secondary block mb-1">Cara mengatasinya:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Susun jadwal harian yang seimbang.</li>
+                  <li>Dahulukan pekerjaan sebelum membuka media sosial.</li>
+                  <li>Terapkan aturan "tidak menggunakan ponsel" saat makan bersama atau belajar.</li>
+                  <li>Evaluasi penggunaan media sosial setiap minggu.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+              <span className="material-symbols-outlined text-primary text-[32px]">sync_problem</span>
+              6. Kambuh Kembali (Relapse)
+            </h3>
+            <p>
+              Relapse adalah kondisi ketika seseorang kembali menggunakan media sosial secara berlebihan setelah sebelumnya berhasil mengurangi atau menghentikan penggunaannya. Kondisi ini umum terjadi dalam proses perubahan perilaku dan bukan berarti seluruh usaha sebelumnya gagal.
+            </p>
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+              <div>
+                <strong className="text-primary block mb-1">Contoh perilaku:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Berhasil mengurangi penggunaan selama beberapa hari, tetapi kembali menghabiskan waktu berjam-jam.</li>
+                  <li>Menghapus aplikasi, kemudian memasangnya kembali karena tidak dapat menahan keinginan.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-error block mb-1">Dampak:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Motivasi menurun.</li>
+                  <li>Merasa gagal.</li>
+                  <li>Sulit mempertahankan kebiasaan baru.</li>
+                </ul>
+              </div>
+              <div>
+                <strong className="text-secondary block mb-1">Cara mengatasinya:</strong>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Jangan menyalahkan diri sendiri jika terjadi kekambuhan.</li>
+                  <li>Identifikasi situasi yang memicu penggunaan berlebihan (misalnya stres, bosan).</li>
+                  <li>Tetapkan target yang realistis, seperti mengurangi durasi sedikit demi sedikit.</li>
+                  <li>Gunakan fitur pengingat waktu penggunaan dan minta dukungan.</li>
+                </ul>
+              </div>
+            </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
               Skoring SVAS-6 dan 3 Tujuan Utama Skrining
