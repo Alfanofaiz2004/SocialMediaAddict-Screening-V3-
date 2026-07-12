@@ -421,10 +421,11 @@ export default function HasilPage() {
               initial={{ opacity: 0, y: 15, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="font-display-lg text-[32px] md:text-[64px] font-extrabold leading-none tracking-tight"
+              className="font-display-lg text-[32px] md:text-[64px] font-extrabold leading-none tracking-tight flex items-center"
               style={{ color: animatedColor }}
             >
-              {rounded}%
+              <motion.span>{rounded}</motion.span>
+              <span>%</span>
             </motion.span>
           </div>
         </div>
