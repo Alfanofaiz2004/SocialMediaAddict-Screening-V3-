@@ -28,7 +28,7 @@ export const ZONES: Record<ZoneType, ZoneInfo> = {
     emoji: '🟡',
   },
   KECANDUAN_TINGGI: {
-    label: 'Sangat Tinggi',
+    label: 'Kecanduan',
     color: '#EF4444', // Red
     bgColor: 'rgba(239, 68, 68, 0.08)',
     borderColor: 'rgba(239, 68, 68, 0.25)',

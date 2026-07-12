@@ -30,7 +30,7 @@ const STEP_INFO: Record<Step, { num: number; title: string; subtitle: string; ic
     num: 2, title: 'Kuesioner S-VAS', subtitle: 'Jawab 6 pertanyaan berikut', icon: 'psychology',
   },
   platform: {
-    num: 3, title: 'Durasi Platform', subtitle: 'Rata-rata penggunaan harian', icon: 'devices',
+    num: 3, title: 'Estimasi Waktu Penggunaan Video Pendek', subtitle: 'Rata-rata penggunaan harian', icon: 'devices',
   },
   sleep: {
     num: 4, title: 'Kualitas Tidur', subtitle: 'Jam tidur per malam', icon: 'bedtime',
@@ -429,7 +429,7 @@ export default function KuesionerPage() {
                   <div className="bg-surface-container border border-outline-variant rounded-xl p-3 md:p-4 flex items-start gap-2.5 md:gap-3">
                     <span className="material-symbols-outlined text-tertiary text-[20px] md:text-[22px] mt-0.5 flex-shrink-0">info</span>
                     <p className="text-[11px] md:text-sm text-on-surface-variant leading-relaxed">
-                      Data penggunaan platform hanya sebagai <strong>Informasi Pendukung</strong> saja.
+                      Data penggunaan platform hanya sebagai <strong>Informasi Pendukung</strong>.
                       Gunakan estimasi saja, tidak perlu mengecek.
                     </p>
                   </div>
