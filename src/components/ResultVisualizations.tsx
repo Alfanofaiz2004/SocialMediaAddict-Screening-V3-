@@ -30,14 +30,14 @@ function AnimatedBar({ score, index }: { score: number, index: number }) {
 
   return (
     <>
-      <div ref={ref} className="flex-grow h-8 bg-surface-variant/40 rounded-full overflow-hidden relative">
+      <div ref={ref} className="flex-grow h-4 md:h-8 bg-surface-variant/40 rounded-full overflow-hidden relative">
         <motion.div
           className="h-full w-full rounded-full origin-left"
           style={{ scaleX, backgroundColor: color }}
         />
       </div>
       <motion.span 
-        className="text-base font-bold w-6 text-center flex-shrink-0"
+        className="text-sm md:text-base font-bold w-4 md:w-6 text-right md:text-center flex-shrink-0"
         style={{ color: color }}
       >
         {rounded}
@@ -49,21 +49,23 @@ function AnimatedBar({ score, index }: { score: number, index: number }) {
 // ─── Custom Horizontal Bar Chart: S-VAS Dimension Breakdown ────────────────────
 export function CriteriaBarChart({ criteria }: { criteria: { label: string; score: number; weight: number }[] }) {
   return (
-    <div className="w-full flex flex-col gap-3 select-none">
+    <div className="w-full flex flex-col gap-3 md:gap-3 select-none">
       {criteria.map((c, i) => {
         return (
           <motion.div
             key={i}
-            className="flex items-center gap-3"
+            className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ delay: i * 0.15, duration: 0.5 }}
           >
-            <span className="w-[130px] md:w-[180px] text-sm md:text-base text-on-surface-variant font-medium text-right flex-shrink-0 truncate">
+            <span className="w-full md:w-[180px] text-xs md:text-base text-on-surface-variant font-medium text-left md:text-right flex-shrink-0">
               {c.label}
             </span>
-            <AnimatedBar score={c.score} index={i} />
+            <div className="flex items-center gap-2 md:gap-3 w-full flex-grow">
+              <AnimatedBar score={c.score} index={i} />
+            </div>
           </motion.div>
         );
       })}
