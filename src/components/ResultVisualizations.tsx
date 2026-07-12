@@ -11,7 +11,7 @@ function AnimatedBar({ score, index }: { score: number, index: number }) {
 
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
-  const width = useTransform(count, (latest) => `${(latest / maxScore) * 100}%`);
+  const scaleX = useTransform(count, (latest) => latest / maxScore);
   const color = useTransform(
     count,
     [0, 2, 3, 4, 5],
@@ -32,8 +32,8 @@ function AnimatedBar({ score, index }: { score: number, index: number }) {
     <>
       <div ref={ref} className="flex-grow h-8 bg-surface-variant/40 rounded-full overflow-hidden relative">
         <motion.div
-          className="h-full rounded-full"
-          style={{ width, backgroundColor: color }}
+          className="h-full w-full rounded-full origin-left"
+          style={{ scaleX, backgroundColor: color }}
         />
       </div>
       <motion.span 
