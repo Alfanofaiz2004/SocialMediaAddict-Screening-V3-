@@ -402,10 +402,6 @@ export default function HasilPage() {
       <div className="relative flex flex-col items-center justify-center w-full max-w-[340px] mx-auto mt-6 mb-2">
         <svg width="320" height="170" viewBox="0 0 320 170" className="overflow-visible">
           <defs>
-            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="8" result="blur" />
-              <feComposite in="SourceGraphic" in2="blur" operator="over" />
-            </filter>
             <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor={zoneInfo.color} stopOpacity="0.5" />
               <stop offset="100%" stopColor={zoneInfo.color} />
@@ -431,7 +427,6 @@ export default function HasilPage() {
             strokeDasharray={circumference}
             strokeDashoffset={animated ? targetOffset : circumference}
             style={{ transition: 'stroke-dashoffset 2s cubic-bezier(0.175, 0.885, 0.32, 1.1)' }}
-            filter="url(#glow)"
           />
 
           {/* Tick Markers */}
