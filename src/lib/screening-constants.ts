@@ -33,7 +33,7 @@ export const ZONES: Record<ZoneType, ZoneInfo> = {
     bgColor: 'rgba(239, 68, 68, 0.08)',
     borderColor: 'rgba(239, 68, 68, 0.25)',
     textColor: '#7f1d1d',
-    description: 'Indikasi kuat adanya kecanduan media sosial. Sangat disarankan untuk segera melakukan intervensi atau pembatasan ketat (Digital Detox).',
+    description: 'Indikasi kuat adanya kecanduan media sosial. Sangat disarankan untuk segera melakukan intervensi atau Pengurangan Penggunaan (Digital Detox).',
     emoji: '🔴',
   },
 };
