@@ -611,21 +611,21 @@ export default function HasilPage() {
               </h2>
 
               {/* Konteks skor: 3 cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="bg-surface-container rounded-xl p-5 text-center flex flex-col items-center gap-1 border border-outline-variant/30">
-                  <span className="material-symbols-outlined text-primary text-[28px]">schedule</span>
-                  <p className="text-3xl font-bold text-on-surface mt-1">{result.contextScores.totalDuration.toFixed(1)}</p>
-                  <p className="text-sm text-on-surface-variant">Jam/Hari Total Medsos</p>
+              <div className="grid grid-cols-3 gap-2 md:gap-4">
+                <div className="bg-surface-container rounded-lg md:rounded-xl p-2 md:p-5 text-center flex flex-col items-center justify-start gap-1 border border-outline-variant/30">
+                  <span className="material-symbols-outlined text-primary text-[18px] md:text-[28px]">schedule</span>
+                  <p className="text-base md:text-3xl font-bold text-on-surface mt-0.5 md:mt-1 leading-none">{result.contextScores.totalDuration.toFixed(1)}</p>
+                  <p className="text-[9px] md:text-sm text-on-surface-variant leading-tight">Jam/Hari Total Medsos</p>
                 </div>
-                <div className="bg-surface-container rounded-xl p-5 text-center flex flex-col items-center gap-1 border border-outline-variant/30">
-                  <span className="material-symbols-outlined text-primary text-[28px]">bedtime</span>
-                  <p className="text-3xl font-bold text-on-surface mt-1">{result.contextScores.sleepHours}</p>
-                  <p className="text-sm text-on-surface-variant">Jam Tidur/Malam</p>
+                <div className="bg-surface-container rounded-lg md:rounded-xl p-2 md:p-5 text-center flex flex-col items-center justify-start gap-1 border border-outline-variant/30">
+                  <span className="material-symbols-outlined text-primary text-[18px] md:text-[28px]">bedtime</span>
+                  <p className="text-base md:text-3xl font-bold text-on-surface mt-0.5 md:mt-1 leading-none">{result.contextScores.sleepHours}</p>
+                  <p className="text-[9px] md:text-sm text-on-surface-variant leading-tight">Jam Tidur Malam</p>
                 </div>
-                <div className="bg-surface-container rounded-xl p-5 text-center flex flex-col items-center gap-1 border border-outline-variant/30">
-                  <span className="material-symbols-outlined text-primary text-[28px]">work</span>
-                  <p className="text-3xl font-bold text-on-surface mt-1">{result.contextScores.productivityImpact}/10</p>
-                  <p className="text-sm text-on-surface-variant">Gangguan Produktivitas</p>
+                <div className="bg-surface-container rounded-lg md:rounded-xl p-2 md:p-5 text-center flex flex-col items-center justify-start gap-1 border border-outline-variant/30">
+                  <span className="material-symbols-outlined text-primary text-[18px] md:text-[28px]">work</span>
+                  <p className="text-base md:text-3xl font-bold text-on-surface mt-0.5 md:mt-1 leading-none">{result.contextScores.productivityImpact}/10</p>
+                  <p className="text-[9px] md:text-sm text-on-surface-variant leading-tight">Gangguan Produktivitas</p>
                 </div>
               </div>
 

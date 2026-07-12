@@ -303,8 +303,8 @@ export function DimensionAccordion({ criteria }: { criteria: { key: string; labe
 
   return (
     <div className="flex flex-col gap-4 w-full mt-2">
-      <div className="bg-[#00685f]/10 p-3 md:p-4 rounded-lg border border-[#00685f]/20 text-[#00685f] mb-2 text-sm md:text-base flex gap-2 md:gap-3 items-start">
-        <span className="material-symbols-outlined text-[20px] md:text-[24px] mt-0.5 flex-shrink-0">info</span>
+      <div className="bg-[#00685f]/10 p-3 md:p-4 rounded-lg border border-[#00685f]/20 text-[#00685f] mb-2 text-xs md:text-sm flex gap-2 md:gap-3 items-start">
+        <span className="material-symbols-outlined text-[18px] md:text-[24px] mt-0.5 flex-shrink-0">info</span>
         <p className="leading-relaxed text-justify">
           <strong>Catatan Penting:</strong> Hasil penjabaran tiap dimensi ini merupakan indikasi awal kecenderungan perilaku kamu, dan <strong>bukanlah sebuah diagnosis klinis</strong>. Jika kamu merasa kondisi ini sangat mengganggu, sangat disarankan untuk berkonsultasi dengan profesional atau psikolog.
         </p>
@@ -380,9 +380,9 @@ export function DimensionAccordion({ criteria }: { criteria: { key: string; labe
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden print:!h-auto print:!opacity-100 print:!visible print:block"
                   >
-                    <div className="p-4 md:p-5 pt-0 print:pt-5 border-t border-outline-variant/30 text-sm md:text-base text-on-surface-variant flex flex-col gap-3 md:gap-4 bg-surface-container-lowest leading-relaxed">
+                    <div className="p-4 md:p-5 pt-0 print:pt-5 border-t border-outline-variant/30 text-xs md:text-sm text-on-surface-variant flex flex-col gap-3 md:gap-4 bg-surface-container-lowest leading-relaxed">
                       <div className="mt-4 print:mt-0 text-justify">
-                        <span className="font-bold text-on-surface block mb-1 md:mb-2 text-base md:text-lg text-left">Pengertian:</span>
+                        <span className="font-bold text-on-surface block mb-1 md:mb-2 text-sm md:text-base text-left">Pengertian:</span>
                         {detail.basic}
                       </div>
 
@@ -390,18 +390,18 @@ export function DimensionAccordion({ criteria }: { criteria: { key: string; labe
                         className="p-3 md:p-4 bg-surface-variant/20 rounded-lg border-l-[6px] text-justify"
                         style={{ borderColor: colorCode }}
                       >
-                        <span className="font-bold text-on-surface block mb-1 md:mb-2 text-base md:text-lg text-left">
+                        <span className="font-bold text-on-surface block mb-1 md:mb-2 text-sm md:text-base text-left">
                           Analisis Skor Kamu ({c.score}/5):
                         </span>
                         {specificDesc}
 
                         {solusiDesc && (
                           <div className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-outline-variant/30">
-                            <span className="font-bold text-on-surface mb-1 md:mb-2 text-base md:text-lg flex items-center gap-2 text-left">
-                              <span className="material-symbols-outlined text-[18px] md:text-[20px]" style={{ color: colorCode }}>lightbulb</span>
+                            <span className="font-bold text-on-surface mb-1 md:mb-2 text-sm md:text-base flex items-center gap-2 text-left">
+                              <span className="material-symbols-outlined text-[16px] md:text-[18px]" style={{ color: colorCode }}>lightbulb</span>
                               Solusi & Rekomendasi
                             </span>
-                            <ul className="list-disc pl-4 md:pl-5 mt-2 space-y-1 text-sm md:text-base text-on-surface-variant leading-relaxed text-justify">
+                            <ul className="list-disc pl-4 md:pl-5 mt-2 space-y-1 text-xs md:text-sm text-on-surface-variant leading-relaxed text-justify">
                               {Array.isArray(solusiDesc) 
                                 ? solusiDesc.map((item: string, idx: number) => <li key={idx}>{item}</li>)
                                 : <li>{solusiDesc}</li>
