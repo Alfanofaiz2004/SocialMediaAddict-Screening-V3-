@@ -353,7 +353,11 @@ export default function KuesionerPage() {
                             {idx + 1}
                           </div>
                           <div className="flex-1">
-                            <span className="inline-flex items-center gap-1 px-3 py-1 bg-primary text-on-primary rounded-lg text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2 shadow-sm">
+                            <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-lg text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2 shadow-sm transition-colors ${
+                              svasScores[idx] !== -1 
+                                ? 'bg-primary text-on-primary'
+                                : 'bg-surface-container-lowest text-primary border border-primary/30'
+                            }`}>
                               {q.dimension}
                             </span>
                             <h3 className="text-base md:text-xl font-bold text-on-surface leading-relaxed">{q.text}</h3>
@@ -397,8 +401,14 @@ export default function KuesionerPage() {
                           })}
                         </div>
                         {q.contoh && (
-                          <div className="mt-4 md:mt-5 p-3.5 md:p-4 bg-primary text-on-primary rounded-xl shadow-md text-xs md:text-sm font-medium leading-relaxed flex items-start gap-3">
-                            <span className="material-symbols-outlined text-[20px] md:text-[24px] mt-0.5 opacity-90">lightbulb</span>
+                          <div className={`mt-4 md:mt-5 p-3.5 md:p-4 rounded-xl shadow-sm text-xs md:text-sm leading-relaxed flex items-start gap-3 transition-colors ${
+                            svasScores[idx] !== -1
+                              ? 'bg-primary text-on-primary font-medium shadow-md'
+                              : 'bg-surface-container-lowest text-on-surface-variant border-l-4 border-primary/40 font-normal'
+                          }`}>
+                            <span className={`material-symbols-outlined text-[20px] md:text-[24px] mt-0.5 ${
+                              svasScores[idx] !== -1 ? 'opacity-90' : 'text-primary'
+                            }`}>lightbulb</span>
                             <i className="not-italic">{q.contoh}</i>
                           </div>
                         )}
