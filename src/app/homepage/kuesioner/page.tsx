@@ -622,10 +622,10 @@ export default function KuesionerPage() {
                 {step !== 'intro' ? (
                   <button
                     onClick={goBack}
-                    className="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-all px-4 py-2.5 rounded-xl hover:bg-primary/5 font-medium"
+                    className="flex items-center gap-1.5 md:gap-2 text-on-surface-variant hover:text-primary transition-all px-3 py-2 md:px-4 md:py-2.5 rounded-xl hover:bg-primary/5 text-sm md:text-base font-medium"
                     disabled={isCalculating}
                   >
-                    <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+                    <span className="material-symbols-outlined text-[18px] md:text-[20px]">arrow_back</span>
                     Kembali
                   </button>
                 ) : (
@@ -635,22 +635,22 @@ export default function KuesionerPage() {
                 <button
                   onClick={goNext}
                   disabled={isNextDisabled() || isCalculating}
-                  className="group bg-primary text-on-primary font-semibold text-base px-8 py-3 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none min-w-[160px] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
+                  className="group bg-primary text-on-primary font-semibold text-sm md:text-base px-6 py-2.5 md:px-8 md:py-3 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none min-w-[130px] md:min-w-[160px] flex items-center justify-center gap-1.5 md:gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
                 >
                   {isCalculating ? (
                     <>
-                      <span className="material-symbols-outlined animate-spin text-[20px]">progress_activity</span>
+                      <span className="material-symbols-outlined animate-spin text-[18px] md:text-[20px]">progress_activity</span>
                       Memproses...
                     </>
                   ) : step === 'productivity' ? (
                     <>
-                      <span className="material-symbols-outlined text-[20px]">insights</span>
+                      <span className="material-symbols-outlined text-[18px] md:text-[20px]">insights</span>
                       Lihat Hasil
                     </>
                   ) : (
                     <>
                       Lanjutkan
-                      <span className="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                      <span className="material-symbols-outlined text-[18px] md:text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
                     </>
                   )}
                 </button>
