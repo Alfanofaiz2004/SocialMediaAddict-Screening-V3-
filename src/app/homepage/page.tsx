@@ -269,7 +269,7 @@ export default function ScreeningLandingPage() {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-primary text-[18px]">verified</span>
-                  Gratis Selamanya
+                  Pengisian Gratis!
                 </span>
               </motion.div>
             </div>
@@ -373,7 +373,7 @@ export default function ScreeningLandingPage() {
             {[
               { value: 6, suffix: '', label: 'Item Kuesioner', icon: 'quiz' },
               { value: 3, suffix: ' mnt', label: 'Waktu Pengerjaan', icon: 'timer' },
-              { value: 6, suffix: '', label: 'Dimensi Adiksi', icon: 'hub' },
+              { value: 6, suffix: '', label: 'beserta Visualisasi', icon: 'hub' },
               { value: 100, suffix: '%', label: 'Gratis & Anonim', icon: 'lock' },
             ].map((stat, i) => (
               <motion.div
