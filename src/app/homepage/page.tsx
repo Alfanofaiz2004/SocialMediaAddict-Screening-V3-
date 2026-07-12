@@ -257,19 +257,19 @@ export default function ScreeningLandingPage() {
                 initial={{ opacity: 0, filter: 'blur(10px)' }}
                 animate={{ opacity: 1, filter: 'blur(0px)' }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="flex flex-wrap gap-6 mt-10 text-sm text-on-surface-variant"
+                className="flex items-center gap-4 md:gap-6 mt-10 text-xs lg:text-sm text-on-surface-variant whitespace-nowrap"
               >
                 <span className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-primary text-[18px]">lock</span>
+                  <span className="material-symbols-outlined text-primary text-[16px] lg:text-[18px]">lock</span>
                   Data Privat & Anonim
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-primary text-[18px]">timer</span>
-                  Hanya 3 Menit
+                  <span className="material-symbols-outlined text-primary text-[16px] lg:text-[18px]">download</span>
+                  Bisa Download PDF!
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-primary text-[18px]">verified</span>
-                  Pengisian Gratis!
+                  <span className="material-symbols-outlined text-primary text-[16px] lg:text-[18px]">verified</span>
+                  Disertakan Visualisasi!
                 </span>
               </motion.div>
             </div>
@@ -372,8 +372,8 @@ export default function ScreeningLandingPage() {
           <div className="max-w-max-width-content mx-auto px-gutter grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { value: 6, suffix: '', label: 'Item Kuesioner', icon: 'quiz' },
-              { value: 3, suffix: ' mnt', label: 'Waktu Pengerjaan', icon: 'timer' },
-              { value: 6, suffix: '', label: 'Dimensi Adiksi', icon: 'hub' },
+              { value: 3, suffix: ' menit', label: 'Waktu Pengerjaan', icon: 'timer' },
+              { value: 2, suffix: '', label: 'Fitur Menarik', icon: 'hub' },
               { value: 100, suffix: '%', label: 'Gratis & Anonim', icon: 'lock' },
             ].map((stat, i) => (
               <motion.div
