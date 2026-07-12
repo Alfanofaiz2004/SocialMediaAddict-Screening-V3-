@@ -345,7 +345,11 @@ export default function KuesionerPage() {
                       {/* Question header */}
                       <div className="p-4 pb-2 md:p-5 md:pb-4">
                         <div className="flex items-start gap-3 md:gap-4 mb-3">
-                          <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl flex items-center justify-center text-sm md:text-base font-bold flex-shrink-0 bg-primary text-on-primary shadow-sm">
+                          <div className={`w-9 h-9 md:w-10 md:h-10 rounded-xl flex items-center justify-center text-sm md:text-base font-bold flex-shrink-0 transition-colors shadow-sm ${
+                            svasScores[idx] !== -1 
+                              ? 'bg-primary text-on-primary' 
+                              : 'bg-surface-container-lowest text-primary border-2 border-primary/20'
+                          }`}>
                             {idx + 1}
                           </div>
                           <div className="flex-1">
