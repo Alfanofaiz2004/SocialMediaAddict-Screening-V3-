@@ -367,28 +367,28 @@ export function DimensionAccordion({ criteria }: { criteria: { key: string; labe
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden print:!h-auto print:!opacity-100 print:!visible print:block"
                   >
-                    <div className="p-5 pt-0 print:pt-5 border-t border-outline-variant/30 text-base text-on-surface-variant flex flex-col gap-4 bg-surface-container-lowest leading-relaxed">
+                    <div className="p-4 md:p-5 pt-0 print:pt-5 border-t border-outline-variant/30 text-sm md:text-base text-on-surface-variant flex flex-col gap-3 md:gap-4 bg-surface-container-lowest leading-relaxed">
                       <div className="mt-4 print:mt-0 text-justify">
-                        <span className="font-bold text-on-surface block mb-2 text-lg text-left">Pengertian:</span>
+                        <span className="font-bold text-on-surface block mb-1 md:mb-2 text-base md:text-lg text-left">Pengertian:</span>
                         {detail.basic}
                       </div>
 
                       <div
-                        className="p-4 bg-surface-variant/20 rounded-lg border-l-[6px] text-justify"
+                        className="p-3 md:p-4 bg-surface-variant/20 rounded-lg border-l-[6px] text-justify"
                         style={{ borderColor: colorCode }}
                       >
-                        <span className="font-bold text-on-surface block mb-2 text-lg text-left">
+                        <span className="font-bold text-on-surface block mb-1 md:mb-2 text-base md:text-lg text-left">
                           Analisis Skor Kamu ({c.score}/5):
                         </span>
                         {specificDesc}
 
                         {solusiDesc && (
-                          <div className="mt-4 pt-4 border-t border-outline-variant/30">
-                            <span className="font-bold text-on-surface mb-2 text-lg flex items-center gap-2 text-left">
-                              <span className="material-symbols-outlined text-[20px]" style={{ color: colorCode }}>lightbulb</span>
+                          <div className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-outline-variant/30">
+                            <span className="font-bold text-on-surface mb-1 md:mb-2 text-base md:text-lg flex items-center gap-2 text-left">
+                              <span className="material-symbols-outlined text-[18px] md:text-[20px]" style={{ color: colorCode }}>lightbulb</span>
                               Solusi & Rekomendasi
                             </span>
-                            <ul className="list-disc pl-5 mt-2 space-y-1 text-base text-on-surface-variant leading-relaxed text-justify">
+                            <ul className="list-disc pl-4 md:pl-5 mt-2 space-y-1 text-sm md:text-base text-on-surface-variant leading-relaxed text-justify">
                               {Array.isArray(solusiDesc) 
                                 ? solusiDesc.map((item: string, idx: number) => <li key={idx}>{item}</li>)
                                 : <li>{solusiDesc}</li>
