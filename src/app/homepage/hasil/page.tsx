@@ -424,7 +424,7 @@ export default function HasilPage() {
               className="font-display-lg text-[32px] md:text-[64px] font-extrabold leading-none tracking-tight"
               style={{ color: animatedColor }}
             >
-              {rounded}
+              {rounded}%
             </motion.span>
           </div>
         </div>
@@ -434,7 +434,7 @@ export default function HasilPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="font-label-md text-xs md:text-base text-on-surface-variant uppercase tracking-[0.05em] md:tracking-[0.1em] font-extrabold text-center leading-tight whitespace-nowrap mt-0 md:mt-2"
+          className="font-label-md text-[11px] md:text-sm text-on-surface-variant uppercase tracking-[0.05em] md:tracking-[0.1em] font-extrabold text-center leading-tight whitespace-nowrap mt-0 md:mt-2"
         >
           Skor Ketergantungan
         </motion.span>
@@ -563,7 +563,7 @@ export default function HasilPage() {
                 <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#10B981]" /> 1-2 Normal</span>
                 <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#F59E0B]" /> 3 Waspada</span>
                 <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#F97316]" /> 4 Tinggi</span>
-                <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#EF4444]" /> 5 Kritis</span>
+                <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#EF4444]" /> 5 Kecanduan</span>
               </div>
             </div>
           </AnimatedSection>
