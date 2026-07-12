@@ -20,7 +20,7 @@ export default function ArtikelPage() {
               <span className="material-symbols-outlined text-[18px]">menu_book</span>
               Deep Dive & Edukasi
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-on-surface leading-tight mb-6 text-left">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-on-surface leading-tight mb-6 text-left">
               Membedah SVAS-6: Landasan Ilmiah di Balik Kecanduan Video Pendek
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-on-surface-variant text-sm">
@@ -37,7 +37,7 @@ export default function ArtikelPage() {
           </header>
 
           {/* ─── ISI ARTIKEL ─── */}
-          <div className="prose-lg md:prose-xl text-on-surface-variant leading-relaxed space-y-6 text-justify [&_h2]:text-left [&_h3]:text-left">
+          <div className="prose md:prose-lg text-on-surface-variant leading-relaxed space-y-6 text-justify [&_h2]:text-left [&_h3]:text-left">
             <p>
               Pernah nggak sih, kamu niatnya cuma mau ngecek TikTok, Instagram Reels, atau YouTube Shorts selama 5 menit aja... eh pas lihat jam, tahu-tahu udah subuh? Tenang, kamu nggak sendirian. Di era digital sekarang, algoritma super canggih bekerja siang-malam buat bikin kamu nggak bisa berhenti nge-<em>scroll</em>.
             </p>
@@ -45,7 +45,7 @@ export default function ArtikelPage() {
               Fenomena ini sering disebut sebagai <strong>"Dopamine Economy"</strong>. Saat kamu nemu konten menarik, otakmu melepaskan dopamin (hormon bahagia). Masalahnya, kalau otak keseringan ditembak dopamin instan, kegiatan dunia nyata yang ritmenya lambat bakal terasa super ngebosenin. Dari keresahan inilah website <em>screening</em> ini lahir. Kami pengen bantu kamu mengukur secara objektif: sejauh mana perilaku <em>scrolling</em> ini udah masuk ke tahap adiktif?
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               Kenalan Dulu Sama SVAS-6 (Short Video Addiction Scale)
             </h2>
             <p>
@@ -58,14 +58,14 @@ export default function ArtikelPage() {
               Biar kamu makin yakin, instrumen ini punya performa psikometrik yang "sakti" banget di dunia akademik! Pengujian konsistensi internalnya menunjukkan nilai koefisien <em>Cronbach's alpha</em> sebesar 0,799 dan <em>McDonald's omega</em> 0,808. Stabilitas metrik skala ini juga diperkuat oleh nilai <em>intraclass correlation coefficient (ICC)</em> sebesar 0,994 serta rentang <em>Cohen's kappa</em> antara 0,667 hingga 0,913. Ditambah lagi, lewat analisis faktor konfirmatori, SVAS-6 terbukti sebagai instrumen satu faktor yang sangat ringkas dan efisien (Katsiroumpa et al., 2025).
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               Anatomi Candu: Bedah 6 Dimensi Indikator SVAS-6
             </h2>
             <p>
               Kalau kamu udah ikut tesnya, pasti kamu lihat grafik radar keren yang bentuknya punya 6 sudut, kan? Keenam sudut itu mewakili 6 indikator utama dari instrumen SVAS-6. Yuk, kita bedah satu per satu!
             </p>
 
-            <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">psychology</span>
               1. Fokus Utama (Salience)
             </h3>
@@ -75,7 +75,7 @@ export default function ArtikelPage() {
             <p className="mt-2 text-on-surface-variant/80 italic">
               Misalnya, ketika sedang belajar, bekerja, makan bersama keluarga, atau berkumpul dengan teman, pikiran tetap tertuju pada video-video terbaru yang ingin ditonton.
             </p>
-            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-sm border border-outline-variant">
               <div>
                 <strong className="text-primary block mb-1">Contoh perilaku:</strong>
                 <ul className="list-disc pl-5 space-y-1">
@@ -104,14 +104,14 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">mood</span>
               2. Pengubah Suasana Hati (Mood Modification)
             </h3>
             <p>
               Mood Modification adalah kondisi ketika seseorang menggunakan media sosial sebagai cara utama untuk mengurangi stres, menghilangkan rasa bosan, mengatasi kesepian, atau memperbaiki suasana hati. Video pendek memberikan hiburan secara instan sehingga otak mulai menganggap aktivitas tersebut sebagai "pelarian" dari masalah.
             </p>
-            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-sm border border-outline-variant">
               <div>
                 <strong className="text-primary block mb-1">Contoh perilaku:</strong>
                 <ul className="list-disc pl-5 space-y-1">
@@ -140,14 +140,14 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">update</span>
               3. Toleransi Waktu (Tolerance)
             </h3>
             <p>
               Tolerance adalah kondisi ketika seseorang membutuhkan waktu penggunaan media sosial yang semakin lama untuk memperoleh kepuasan yang sama. Jika sebelumnya merasa puas setelah menonton selama 15 menit, lama-kelamaan durasi tersebut meningkat menjadi satu jam, dua jam, bahkan lebih.
             </p>
-            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-sm border border-outline-variant">
               <div>
                 <strong className="text-primary block mb-1">Contoh perilaku:</strong>
                 <ul className="list-disc pl-5 space-y-1">
@@ -174,14 +174,14 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">sick</span>
               4. Gelisah saat Berhenti (Withdrawal)
             </h3>
             <p>
               Withdrawal adalah munculnya perasaan tidak nyaman ketika tidak dapat mengakses media sosial. Perasaan tersebut dapat berupa gelisah, bosan, mudah marah, atau cemas ketika akses terhadap aplikasi dibatasi. Perlu dipahami bahwa pada kecanduan perilaku, withdrawal lebih banyak berupa gejala psikologis, bukan gejala fisik seperti pada ketergantungan zat.
             </p>
-            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-sm border border-outline-variant">
               <div>
                 <strong className="text-primary block mb-1">Contoh perilaku:</strong>
                 <ul className="list-disc pl-5 space-y-1">
@@ -209,14 +209,14 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">gavel</span>
               5. Konflik & Gangguan Hidup (Conflict)
             </h3>
             <p>
               Conflict terjadi ketika penggunaan media sosial mulai mengganggu tanggung jawab, hubungan sosial, maupun aktivitas sehari-hari. Konflik dapat terjadi dengan diri sendiri karena merasa bersalah telah menghabiskan banyak waktu, maupun dengan orang lain akibat penggunaan media sosial yang berlebihan.
             </p>
-            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-sm border border-outline-variant">
               <div>
                 <strong className="text-primary block mb-1">Contoh perilaku:</strong>
                 <ul className="list-disc pl-5 space-y-1">
@@ -243,14 +243,14 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">sync_problem</span>
               6. Kambuh Kembali (Relapse)
             </h3>
             <p>
               Relapse adalah kondisi ketika seseorang kembali menggunakan media sosial secara berlebihan setelah sebelumnya berhasil mengurangi atau menghentikan penggunaannya. Kondisi ini umum terjadi dalam proses perubahan perilaku dan bukan berarti seluruh usaha sebelumnya gagal.
             </p>
-            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-base border border-outline-variant">
+            <div className="mt-4 bg-surface-variant/30 rounded-xl p-5 space-y-4 text-sm border border-outline-variant">
               <div>
                 <strong className="text-primary block mb-1">Contoh perilaku:</strong>
                 <ul className="list-disc pl-5 space-y-1">
@@ -277,7 +277,7 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               Skoring SVAS-6 dan 3 Tujuan Utama Skrining
             </h2>
             <p>
@@ -298,7 +298,7 @@ export default function ArtikelPage() {
               </li>
             </ul>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               Kenapa Kami Juga Menanyakan Kualitas Tidur & Produktivitas?
             </h2>
             <p>
@@ -315,7 +315,7 @@ export default function ArtikelPage() {
               Otak yang telanjur kebiasaan ngeproses informasi baru setiap 15 detik bakal kelabakan kalau disuruh fokus ngerjain satu tugas berat berjam-jam (kayak nulis laporan atau belajar). Otakmu bakal ngerasa bosan luar biasa dan produktivitas kerjamu pun hancur lebur.
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               <em>So, What's Next?</em>
             </h2>
             <p>
