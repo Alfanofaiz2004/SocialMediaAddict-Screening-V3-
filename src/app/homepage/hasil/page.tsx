@@ -84,9 +84,9 @@ export default function HasilPage() {
     if (!dashboardRef.current || !result) return;
     setIsPrinting(true);
 
-    // Scroll ke atas
+    // Scroll ke atas dan beri jeda untuk animasi (4 detik) agar visualisasi sudah terisi
     window.scrollTo(0, 0);
-    await new Promise(r => setTimeout(r, 500));
+    await new Promise(r => setTimeout(r, 4000));
 
     try {
       const html2canvas = (await import('html2canvas')).default;
@@ -238,79 +238,27 @@ export default function HasilPage() {
       });
 
       // ══════════════════════════════════════════════════════════════════
-      // STEP 6: Generate multi-page PDF portrait A4
+      // STEP 6: Generate Pageless PDF
       // ══════════════════════════════════════════════════════════════════
       const imgData = canvas.toDataURL('image/jpeg', 0.95);
       const canvasW = canvas.width;
       const canvasH = canvas.height;
 
-      const pdfW = 210;
-      const pdfH = 297;
+      const pdfW = 210; // Lebar standard A4 dalam mm
       const margin = 5;
       const usableW = pdfW - margin * 2;
-      const usableH = pdfH - margin * 2;
-
-      const pdf = new jsPDF('p', 'mm', 'a4');
       const totalH = (canvasH * usableW) / canvasW;
+      const pdfH = totalH + margin * 2;
 
-      if (totalH <= usableH) {
-        pdf.addImage(imgData, 'JPEG', margin, margin, usableW, totalH);
-      } else {
-        const srcPageH = (usableH / usableW) * canvasW;
-        let srcY = 0;
-        let pageNum = 0;
+      // Custom page size yang menyesuaikan tinggi konten (pageless)
+      const pdf = new jsPDF({
+        orientation: 'p',
+        unit: 'mm',
+        format: [pdfW, pdfH]
+      });
 
-        // Kumpulkan posisi elemen yang tidak boleh terpotong
-        const parentRect = element.getBoundingClientRect();
-        const noBreakEls = Array.from(element.querySelectorAll('.pdf-avoid-break'));
-        const noBreakRects = noBreakEls.map(el => {
-          const rect = el.getBoundingClientRect();
-          // Dikali 2 karena scale html2canvas = 2
-          return {
-            top: (rect.top - parentRect.top) * 2,
-            bottom: (rect.bottom - parentRect.top) * 2
-          };
-        });
-
-        while (srcY < canvasH) {
-          if (pageNum > 0) pdf.addPage();
-
-          let sliceH = Math.min(srcPageH, canvasH - srcY);
-
-          // Jika ini bukan halaman terakhir, cek apakah garis potong menabrak elemen
-          if (srcY + sliceH < canvasH) {
-            let breakY = srcY + sliceH;
-            for (const rect of noBreakRects) {
-              // Jika breakY memotong elemen ini
-              if (breakY > rect.top && breakY < rect.bottom) {
-                // Geser titik potong ke atas elemen, kecuali elemennya lebih tinggi dari 1 halaman penuh
-                if (rect.top > srcY) {
-                  // Beri margin atas sedikit (e.g. 10px canvas) agar tidak terlalu mepet potongannya
-                  breakY = Math.max(srcY + 10, rect.top - 20);
-                  sliceH = breakY - srcY;
-                }
-                break;
-              }
-            }
-          }
-
-          const pageCanvas = document.createElement('canvas');
-          pageCanvas.width = canvasW;
-          pageCanvas.height = sliceH;
-          const ctx = pageCanvas.getContext('2d')!;
-          // Pastikan background putih
-          ctx.fillStyle = '#ffffff';
-          ctx.fillRect(0, 0, canvasW, sliceH);
-          ctx.drawImage(canvas, 0, srcY, canvasW, sliceH, 0, 0, canvasW, sliceH);
-
-          const pageImg = pageCanvas.toDataURL('image/jpeg', 0.95);
-          const destH = (sliceH * usableW) / canvasW;
-          pdf.addImage(pageImg, 'JPEG', margin, margin, usableW, destH);
-
-          srcY += sliceH;
-          pageNum++;
-        }
-      }
+      // Tambahkan seluruh image ke satu halaman tanpa memotong
+      pdf.addImage(imgData, 'JPEG', margin, margin, usableW, totalH);
 
       // Auto-download
       const now = new Date();
