@@ -119,7 +119,7 @@ export function PlatformBarChart({ data }: { data: { name: string; hours: number
           >
             <div className="w-full border-t-2 border-dashed border-red-400" />
             <span className="absolute right-0 -top-5 text-[11px] font-semibold text-red-500 bg-surface/80 px-1.5 py-0.5 rounded whitespace-nowrap">
-              Batas Sehat (2 jam)
+              Batas Harian (2 jam)
             </span>
           </div>
 
@@ -176,7 +176,7 @@ export function PlatformBarChart({ data }: { data: { name: string; hours: number
       {/* Legend */}
       <div className="flex items-center justify-center gap-6 mt-4 text-xs text-on-surface-variant">
         <span className="inline-flex items-center gap-1.5">
-          <span className="w-5 h-0 border-t-2 border-dashed border-red-400 inline-block" /> Batas Sehat (2 jam)
+          <span className="w-5 h-0 border-t-2 border-dashed border-red-400 inline-block" /> Batas Harian (2 jam)
         </span>
         <span className="inline-flex items-center gap-1.5">
           <span className="w-5 h-0 border-t-2 border-dashed border-blue-400 inline-block" /> Total Pemakaian
