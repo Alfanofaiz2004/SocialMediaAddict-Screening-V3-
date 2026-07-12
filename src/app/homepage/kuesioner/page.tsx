@@ -141,7 +141,7 @@ export default function KuesionerPage() {
   const setSvasScore = (idx: number, val: number) => {
     setSvasScores((prev) => {
       const next = [...prev];
-      next[idx] = val;
+      next[idx] = next[idx] === val ? -1 : val;
       return next;
     });
   };
@@ -346,11 +346,7 @@ export default function KuesionerPage() {
                       <div className="p-4 pb-2 md:p-5 md:pb-4">
                         <div className="flex items-start gap-3 md:gap-4 mb-3">
                           <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl flex items-center justify-center text-sm md:text-base font-bold flex-shrink-0 bg-primary text-on-primary shadow-sm">
-                            {svasScores[idx] !== -1 ? (
-                              <span className="material-symbols-outlined text-[20px]">check</span>
-                            ) : (
-                              idx + 1
-                            )}
+                            {idx + 1}
                           </div>
                           <div className="flex-1">
                             <span className="inline-flex items-center gap-1 px-3 py-1 bg-primary text-on-primary rounded-lg text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2 shadow-sm">
