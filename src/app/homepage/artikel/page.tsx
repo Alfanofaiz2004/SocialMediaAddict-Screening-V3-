@@ -38,30 +38,30 @@ export default function ArtikelPage() {
 
           {/* ─── ISI ARTIKEL ─── */}
           <div className="prose md:prose-lg max-w-none text-on-surface-variant leading-relaxed space-y-6 text-justify [&_h2]:text-left [&_h3]:text-left">
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Pernah nggak sih, kamu niatnya cuma mau ngecek TikTok, Instagram Reels, atau YouTube Shorts selama 5 menit aja... eh pas lihat jam, tahu-tahu udah subuh? Tenang, kamu nggak sendirian. Di era digital sekarang, algoritma super canggih bekerja siang-malam buat bikin kamu nggak bisa berhenti nge-<em>scroll</em>.
             </p>
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Fenomena ini sering disebut sebagai <strong>"Dopamine Economy"</strong>. Saat kamu nemu konten menarik, otakmu melepaskan dopamin (hormon bahagia). Masalahnya, kalau otak keseringan ditembak dopamin instan, kegiatan dunia nyata yang ritmenya lambat bakal terasa super ngebosenin. Dari keresahan inilah website <em>screening</em> ini lahir. Kami pengen bantu kamu mengukur secara objektif: sejauh mana perilaku <em>scrolling</em> ini udah masuk ke tahap adiktif?
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               Kenalan Dulu Sama SVAS-6 (Short Video Addiction Scale)
             </h2>
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Tes yang kamu kerjain di website ini tuh bukan kuis tebak-tebakan abal-abal, lho. Kami menggunakan instrumen psikometrik asli bernama <strong>Short Video Addiction Scale (SVAS)</strong>. Skala ini awalnya dikembangkan dan divalidasi oleh para peneliti di China (Ye et al., 2024) di bidang psikologi dan perilaku digital, sebagai respons terhadap betapa gilanya fenomena kecanduan platform video pendek secara global.
             </p>
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Secara ilmiah, SVAS dirancang berdasarkan konsep <em>behavioral addiction</em> (kecanduan perilaku). Instrumen ini awalnya diadaptasi dari <em>Bergen Facebook Addiction Scale (BFAS)</em>, yang kemudian dioptimalkan lagi menjadi versi super ringkas yang disebut <strong>SVAS-6 items</strong>. Dengan cuma enam butir pernyataan, alat ini udah bisa mengidentifikasi kecenderungan perilaku adiktif seseorang dengan sangat presisi.
             </p>
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Biar kamu makin yakin, instrumen ini punya performa psikometrik yang "sakti" banget di dunia akademik! Pengujian konsistensi internalnya menunjukkan nilai koefisien <em>Cronbach's alpha</em> sebesar 0,799 dan <em>McDonald's omega</em> 0,808. Stabilitas metrik skala ini juga diperkuat oleh nilai <em>intraclass correlation coefficient (ICC)</em> sebesar 0,994 serta rentang <em>Cohen's kappa</em> antara 0,667 hingga 0,913. Ditambah lagi, lewat analisis faktor konfirmatori, SVAS-6 terbukti sebagai instrumen satu faktor yang sangat ringkas dan efisien (Katsiroumpa et al., 2025).
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               Anatomi Candu: Bedah 6 Dimensi Indikator SVAS-6
             </h2>
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Kalau kamu udah ikut tesnya, pasti kamu lihat grafik radar keren yang bentuknya punya 6 sudut, kan? Keenam sudut itu mewakili 6 indikator utama dari instrumen SVAS-6. Yuk, kita bedah satu per satu!
             </p>
 
@@ -280,13 +280,13 @@ export default function ArtikelPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               Skoring SVAS-6 dan 3 Tujuan Utama Skrining
             </h2>
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Dalam penelitian aslinya, skala SVAS-6 menetapkan nilai ambang batas (<em>cut-off point</em>) optimal sebesar 15. Artinya, kalau skor totalmu <strong>≥ 15</strong>, itu mengindikasikan kecenderungan penggunaan video pendek yang problematis dengan probabilitas kecanduan tinggi. Sebaliknya, kalau skormu <strong>&lt; 15</strong>, kamu dikategorikan sebagai pengguna yang sehat (Katsiroumpa et al., 2025). 
             </p>
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Di website kami, perhitungan tersebut dikonversi secara otomatis ke dalam sistem persentase dan visual zona skor (Normal, Waspada, Kritis) agar lebih gampang kamu pahami. Penggunaan instrumen SVAS dalam penelitian dan praktik klinis (termasuk website ini) sebenarnya mencakup 3 aspek utama:
             </p>
-            <ul className="list-disc pl-6 space-y-4 my-6 marker:text-primary">
+            <ul className="list-disc pl-6 space-y-4 my-6 marker:text-primary text-lg md:text-xl text-on-surface font-medium">
               <li>
                 <strong>Sebagai Sarana Skrining (Deteksi Dini):</strong> Mengidentifikasi individu yang berisiko mengalami gangguan perilaku akibat penggunaan video pendek yang berlebihan sebelum jadi makin parah.
               </li>
@@ -301,7 +301,7 @@ export default function ArtikelPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               Kenapa Kami Juga Menanyakan Kualitas Tidur & Produktivitas?
             </h2>
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Mungkin kamu bingung, "Tes kecanduan kok nanyain jam tidur sama gangguan produktivitas?" <em>Well</em>, kecanduan medsos itu nggak pernah menyerang sendirian. Dia bakal ngerusak pilar utama kesehatanmu melalui dua jalur ini:
             </p>
             
@@ -324,7 +324,7 @@ export default function ArtikelPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
               <em>So, What's Next?</em>
             </h2>
-            <p>
+            <p className="text-lg md:text-xl leading-relaxed text-on-surface font-medium">
               Memahami landasan ilmiah dan cara kerja algoritma yang memanipulasi psikologimu adalah langkah pertama buat merebut kembali kebebasan digitalmu. Kalau informasi dari penelitian-penelitian di atas bikin kamu mikir "Wah, ini *gue* banget," tapi kamu belum ngambil tesnya... yuk, cobain sekarang!
             </p>
           </div>
