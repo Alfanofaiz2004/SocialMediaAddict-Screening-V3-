@@ -187,7 +187,7 @@ export function PlatformBarChart({ data }: { data: { name: string; hours: number
 export function SVASRadarChart({ criteria }: { criteria: { label: string; score: number }[] }) {
   const size = 280;
   const center = size / 2;
-  const maxRadius = 100;
+  const maxRadius = 85;
   const n = criteria.length;
 
   const getCoordinates = (val: number, i: number) => {
@@ -239,12 +239,15 @@ export function SVASRadarChart({ criteria }: { criteria: { label: string; score:
         })}
 
         {criteria.map((c, i) => {
-          // Perkecil jarak teks dari chart agar tidak terpotong (1.32 -> 1.15)
-          const outer = getCoordinates(1.15, i);
+          // Jarak teks dari chart 
+          const outer = getCoordinates(1.2, i);
           const angle = (Math.PI * 2 * i) / n - Math.PI / 2;
           let textAnchor: 'start' | 'middle' | 'end' = 'middle';
           if (Math.cos(angle) > 0.3) textAnchor = 'start';
           else if (Math.cos(angle) < -0.3) textAnchor = 'end';
+          
+          const words = c.label.split(' ');
+          
           return (
             <text
               key={i}
@@ -254,7 +257,14 @@ export function SVASRadarChart({ criteria }: { criteria: { label: string; score:
               className="text-[9px] md:text-[11px] font-medium fill-on-surface-variant"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              {c.label}
+              {words.length > 1 ? (
+                <>
+                  <tspan x={outer.x} dy="-0.4em">{words[0]}</tspan>
+                  <tspan x={outer.x} dy="1.2em">{words.slice(1).join(' ')}</tspan>
+                </>
+              ) : (
+                c.label
+              )}
             </text>
           );
         })}
