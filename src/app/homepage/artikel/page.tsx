@@ -12,7 +12,7 @@ export default function ArtikelPage() {
 
       <main className="flex-grow w-full flex flex-col items-center pb-24">
         {/* Article Container - Diperlebar menjadi max-w-5xl */}
-        <article className="w-full max-w-6xl px-6 md:px-12 mt-12 md:mt-16">
+        <article className="w-full max-w-7xl px-6 md:px-12 mt-12 md:mt-16">
           
           {/* ─── HEADER ARTIKEL ─── */}
           <header className="mb-12 border-b border-outline-variant pb-8">
@@ -20,7 +20,7 @@ export default function ArtikelPage() {
               <span className="material-symbols-outlined text-[18px]">menu_book</span>
               Deep Dive & Edukasi
             </div>
-            <h1 className="text-3xl md:text-4xl font-extrabold text-on-surface leading-tight mb-6 text-left">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-on-surface leading-tight mb-6 text-left">
               Membedah SVAS-6: Landasan Ilmiah di Balik Kecanduan Video Pendek
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-on-surface-variant text-sm">
@@ -37,7 +37,7 @@ export default function ArtikelPage() {
           </header>
 
           {/* ─── ISI ARTIKEL ─── */}
-          <div className="prose md:prose-lg max-w-none text-on-surface-variant leading-relaxed space-y-6 text-justify [&_h2]:text-left [&_h3]:text-left">
+          <div className="prose md:prose-xl max-w-none text-on-surface-variant leading-relaxed space-y-6 text-justify [&_h2]:text-left [&_h3]:text-left">
             <p>
               Pernah nggak sih, kamu niatnya cuma mau ngecek TikTok, Instagram Reels, atau YouTube Shorts selama 5 menit aja... eh pas lihat jam, tahu-tahu udah subuh? Tenang, kamu nggak sendirian. Di era digital sekarang, algoritma super canggih bekerja siang-malam buat bikin kamu nggak bisa berhenti nge-<em>scroll</em>.
             </p>
@@ -45,7 +45,7 @@ export default function ArtikelPage() {
               Fenomena ini sering disebut sebagai <strong>"Dopamine Economy"</strong>. Saat kamu nemu konten menarik, otakmu melepaskan dopamin (hormon bahagia). Masalahnya, kalau otak keseringan ditembak dopamin instan, kegiatan dunia nyata yang ritmenya lambat bakal terasa super ngebosenin. Dari keresahan inilah website <em>screening</em> ini lahir. Kami pengen bantu kamu mengukur secara objektif: sejauh mana perilaku <em>scrolling</em> ini udah masuk ke tahap adiktif?
             </p>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
               Kenalan Dulu Sama SVAS-6 (Short Video Addiction Scale)
             </h2>
             <p>
@@ -58,14 +58,14 @@ export default function ArtikelPage() {
               Biar kamu makin yakin, instrumen ini punya performa psikometrik yang "sakti" banget di dunia akademik! Pengujian konsistensi internalnya menunjukkan nilai koefisien <em>Cronbach's alpha</em> sebesar 0,799 dan <em>McDonald's omega</em> 0,808. Stabilitas metrik skala ini juga diperkuat oleh nilai <em>intraclass correlation coefficient (ICC)</em> sebesar 0,994 serta rentang <em>Cohen's kappa</em> antara 0,667 hingga 0,913. Ditambah lagi, lewat analisis faktor konfirmatori, SVAS-6 terbukti sebagai instrumen satu faktor yang sangat ringkas dan efisien (Katsiroumpa et al., 2025).
             </p>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
               Anatomi Candu: Bedah 6 Dimensi Indikator SVAS-6
             </h2>
             <p>
               Kalau kamu udah ikut tesnya, pasti kamu lihat grafik radar keren yang bentuknya punya 6 sudut, kan? Keenam sudut itu mewakili 6 indikator utama dari instrumen SVAS-6. Yuk, kita bedah satu per satu!
             </p>
 
-            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl md:text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">psychology</span>
               1. Fokus Utama (Salience)
             </h3>
@@ -104,7 +104,7 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl md:text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">mood</span>
               2. Pengubah Suasana Hati (Mood Modification)
             </h3>
@@ -140,7 +140,7 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl md:text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">update</span>
               3. Toleransi Waktu (Tolerance)
             </h3>
@@ -174,7 +174,7 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl md:text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">sick</span>
               4. Gelisah saat Berhenti (Withdrawal)
             </h3>
@@ -209,7 +209,7 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl md:text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">gavel</span>
               5. Konflik & Gangguan Hidup (Conflict)
             </h3>
@@ -243,7 +243,7 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h3 className="text-xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
+            <h3 className="text-xl md:text-2xl font-bold text-on-surface mt-10 mb-3 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-[32px]">sync_problem</span>
               6. Kambuh Kembali (Relapse)
             </h3>
@@ -277,7 +277,7 @@ export default function ArtikelPage() {
               </div>
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
               Skoring SVAS-6 dan 3 Tujuan Utama Skrining
             </h2>
             <p>
@@ -298,7 +298,7 @@ export default function ArtikelPage() {
               </li>
             </ul>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
               Kenapa Kami Juga Menanyakan Kualitas Tidur & Produktivitas?
             </h2>
             <p>
@@ -315,7 +315,7 @@ export default function ArtikelPage() {
               Otak yang telanjur kebiasaan ngeproses informasi baru setiap 15 detik bakal kelabakan kalau disuruh fokus ngerjain satu tugas berat berjam-jam (kayak nulis laporan atau belajar). Otakmu bakal ngerasa bosan luar biasa dan produktivitas kerjamu pun hancur lebur.
             </p>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-on-surface mt-14 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-on-surface mt-14 mb-6">
               <em>So, What's Next?</em>
             </h2>
             <p>
