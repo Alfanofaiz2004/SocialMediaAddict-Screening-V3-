@@ -8,7 +8,7 @@ export default function ScreeningHeader() {
 
   return (
     <header className="bg-surface/80 backdrop-blur-md border-b border-outline-variant w-full z-50 sticky top-0">
-      <div className="flex justify-between items-center w-full px-4 md:px-6 max-w-[1200px] mx-auto h-20">
+      <div className="flex justify-between items-center w-full px-4 md:px-6 max-w-[1200px] mx-auto h-16 md:h-20">
         <div className="w-1/3 md:hidden"></div>
         <nav className="hidden md:flex gap-6 h-full items-center w-1/3">
           <Link
@@ -44,7 +44,7 @@ export default function ScreeningHeader() {
         </nav>
 
         <Link href="/homepage" className="w-1/3 flex justify-center items-center cursor-pointer no-underline">
-          <img src="/logo.png" alt="MindScroll Logo" className="h-[38px] md:h-[44px] w-auto object-contain" />
+          <img src="/logo.png" alt="MindScroll Logo" className="h-[28px] md:h-[40px] w-auto object-contain" />
         </Link>
 
         {/* Empty div to balance flex layout */}

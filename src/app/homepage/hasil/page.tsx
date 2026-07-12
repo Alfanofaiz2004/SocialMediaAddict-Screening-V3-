@@ -498,7 +498,7 @@ export default function HasilPage() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-5xl md:text-6xl mb-4"
+              className="text-3xl md:text-6xl mb-4"
             >
 
             </motion.div>
@@ -506,7 +506,7 @@ export default function HasilPage() {
               initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight"
+              className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight"
             >
               Yeayy! Hasil Screening Kamu Sudah Selesai!
             </motion.h1>
@@ -514,7 +514,7 @@ export default function HasilPage() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-white/80 text-base md:text-lg max-w-2xl mx-auto"
+              className="text-white/80 text-sm md:text-lg max-w-2xl mx-auto"
             >
               Scroll Ke Bawah Yaa Buat lihat Analisis Hasil Short-Form Video Addiction Scale (SVAS-6) Kamu!
             </motion.p>
@@ -534,31 +534,31 @@ export default function HasilPage() {
               {/* Right Side: Status Banner Card */}
               <div className="w-full lg:w-[55%]">
                 <div
-                  className="rounded-2xl p-6 md:p-8 flex flex-col gap-4 relative overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                  className="rounded-2xl p-5 md:p-8 flex flex-col gap-4 relative overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                   style={{ backgroundColor: colorScheme.bg, border: `1px solid ${zoneInfo.color}40` }}
                 >
                   {/* Decorative faint background icon */}
                   <span
-                    className="material-symbols-outlined absolute -right-8 -bottom-8 text-[140px] opacity-[0.07] pointer-events-none select-none"
+                    className="material-symbols-outlined absolute -right-6 -bottom-6 md:-right-8 md:-bottom-8 text-[90px] md:text-[140px] opacity-[0.07] pointer-events-none select-none"
                     style={{ color: zoneInfo.color }}
                   >
                     {result.zone === 'NORMAL' ? 'verified' : result.zone === 'BERISIKO' ? 'warning' : 'dangerous'}
                   </span>
 
-                  <div className="flex items-center gap-4 relative z-10">
+                  <div className="flex items-center gap-3 md:gap-4 relative z-10">
                     <div
-                      className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm"
+                      className="w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm"
                       style={{ backgroundColor: zoneInfo.color, color: '#fff' }}
                     >
-                      <span className="material-symbols-outlined text-[32px]">
+                      <span className="material-symbols-outlined text-[20px] md:text-[32px]">
                         {result.zone === 'NORMAL' ? 'health_and_safety' : result.zone === 'BERISIKO' ? 'error' : 'warning'}
                       </span>
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-xs font-bold uppercase tracking-widest mb-1 opacity-80" style={{ color: colorScheme.text }}>
+                      <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest mb-0.5 md:mb-1 opacity-80" style={{ color: colorScheme.text }}>
                         Status
                       </span>
-                      <h3 className="text-2xl md:text-3xl font-extrabold leading-tight" style={{ color: colorScheme.text }}>
+                      <h3 className="text-lg md:text-3xl font-extrabold leading-tight" style={{ color: colorScheme.text }}>
                         {zoneInfo.label}
                       </h3>
                     </div>
@@ -567,7 +567,7 @@ export default function HasilPage() {
                   <div className="h-px w-full my-2 opacity-20" style={{ backgroundColor: colorScheme.text }} />
 
                   <p
-                    className="text-base md:text-lg font-medium leading-relaxed relative z-10"
+                    className="text-sm md:text-lg font-medium leading-relaxed relative z-10"
                     style={{ color: colorScheme.text }}
                   >
                     {zoneInfo.description}

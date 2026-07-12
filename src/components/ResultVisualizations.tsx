@@ -290,8 +290,8 @@ export function DimensionAccordion({ criteria }: { criteria: { key: string; labe
 
   return (
     <div className="flex flex-col gap-4 w-full mt-2">
-      <div className="bg-[#00685f]/10 p-4 rounded-lg border border-[#00685f]/20 text-[#00685f] mb-2 text-base flex gap-3 items-start">
-        <span className="material-symbols-outlined text-[24px] mt-0.5 flex-shrink-0">info</span>
+      <div className="bg-[#00685f]/10 p-3 md:p-4 rounded-lg border border-[#00685f]/20 text-[#00685f] mb-2 text-sm md:text-base flex gap-2 md:gap-3 items-start">
+        <span className="material-symbols-outlined text-[20px] md:text-[24px] mt-0.5 flex-shrink-0">info</span>
         <p className="leading-relaxed">
           <strong>Catatan Penting:</strong> Hasil penjabaran tiap dimensi ini merupakan indikasi awal kecenderungan perilaku kamu, dan <strong>bukanlah sebuah diagnosis klinis</strong>. Jika kamu merasa kondisi ini sangat mengganggu, sangat disarankan untuk berkonsultasi dengan profesional atau psikolog.
         </p>
@@ -326,19 +326,19 @@ export function DimensionAccordion({ criteria }: { criteria: { key: string; labe
             >
               <button
                 onClick={() => setOpenIndex(isOpen ? null : i)}
-                className="w-full flex items-center justify-between p-4 hover:bg-surface-variant/30 text-left transition-colors print:hidden"
+                className="w-full flex items-center justify-between p-3 md:p-4 hover:bg-surface-variant/30 text-left transition-colors print:hidden"
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 md:gap-4">
                   <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm flex-shrink-0"
+                    className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-white text-xs md:text-sm flex-shrink-0"
                     style={{ backgroundColor: colorCode }}
                   >
                     {c.score}/5
                   </div>
-                  <span className="text-lg font-bold text-on-surface">{c.label}</span>
+                  <span className="text-base md:text-lg font-bold text-on-surface">{c.label}</span>
                 </div>
                 <span
-                  className="material-symbols-outlined text-[28px] text-on-surface-variant transition-transform duration-300"
+                  className="material-symbols-outlined text-[24px] md:text-[28px] text-on-surface-variant transition-transform duration-300"
                   style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
                 >
                   expand_more
