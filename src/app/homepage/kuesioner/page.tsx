@@ -266,16 +266,16 @@ export default function KuesionerPage() {
               {step === 'intro' && (
                 <div className="flex flex-col gap-6">
                   {/* Welcome card */}
-                  <div className="bg-gradient-to-br from-primary/5 to-primary/[0.02] border border-primary/15 rounded-2xl p-4 md:p-6">
-                    <div className="flex items-start gap-3 md:gap-4 mb-4 md:mb-6">
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <span className="material-symbols-outlined text-primary text-[24px] md:text-[28px]">waving_hand</span>
+                  <div className="bg-gradient-to-br from-primary/5 to-primary/[0.02] border border-primary/15 rounded-2xl p-4 md:p-8">
+                    <div className="flex items-start gap-3 md:gap-5 mb-6 md:mb-8">
+                      <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <span className="material-symbols-outlined text-primary text-[28px] md:text-[36px]">waving_hand</span>
                       </div>
                       <div>
-                        <h2 className="text-lg md:text-2xl font-bold text-on-surface mb-1 md:mb-2">
+                        <h2 className="text-xl md:text-3xl font-bold text-on-surface mb-2 md:mb-3">
                           Halo{userName ? `, ${userName}` : ''}!
                         </h2>
-                        <p className="text-xs md:text-sm text-on-surface-variant leading-relaxed">
+                        <p className="text-base md:text-xl font-medium text-on-surface-variant leading-relaxed">
                           Kuesioner ini dirancang untuk mengukur tingkat kecanduan terhadap platform video berdurasi pendek
                           (TikTok, Instagram Reels, YouTube Shorts) menggunakan instrumen <strong>SVAS-6</strong>.
                         </p>
@@ -283,7 +283,7 @@ export default function KuesionerPage() {
                     </div>
 
                     {/* Instruction items */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-2">
                       {[
                         { icon: 'quiz', text: 'Jawab 6 pertanyaan berdasarkan pengalaman 6 bulan terakhir.' },
                         { icon: 'tune', text: '5 pilihan jawaban dari "Tidak Pernah" hingga "Sangat Sering".' },
@@ -295,24 +295,12 @@ export default function KuesionerPage() {
                           initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }}
                           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                           transition={{ delay: 0.1 + i * 0.08 }}
-                          className="flex items-start gap-2.5 bg-surface-container-lowest/80 rounded-xl p-3 border border-outline-variant/50"
+                          className="flex items-start gap-3 md:gap-4 bg-surface-container-lowest/80 rounded-xl p-4 md:p-5 border border-outline-variant/50 shadow-sm"
                         >
-                          <span className="material-symbols-outlined text-primary text-[18px] md:text-[20px] mt-0.5">{item.icon}</span>
-                          <p className="text-[11px] md:text-xs text-on-surface-variant leading-relaxed">{item.text}</p>
+                          <span className="material-symbols-outlined text-primary text-[24px] md:text-[28px] mt-0.5">{item.icon}</span>
+                          <p className="text-sm md:text-base font-medium text-on-surface-variant leading-relaxed">{item.text}</p>
                         </motion.div>
                       ))}
-                    </div>
-                  </div>
-
-                  {/* Methodology card */}
-                  <div className="bg-surface-container border border-outline-variant rounded-xl p-3 md:p-5 flex items-start gap-2.5 md:gap-4">
-                    <span className="material-symbols-outlined text-tertiary text-[18px] md:text-[24px] mt-0.5 flex-shrink-0">science</span>
-                    <div>
-                      <h3 className="text-xs md:text-sm font-bold text-on-surface mb-0.5 md:mb-1">Metodologi</h3>
-                      <p className="text-[10px] md:text-sm text-on-surface-variant leading-relaxed">
-                        Sistem ini menggunakan <em>Penjumlahan Skor Absolut (SVAS-6)</em> untuk menghitung
-                        indeks keparahan kecanduan video pendek berdasarkan 6 kriteria inti yang divalidasi secara ilmiah.
-                      </p>
                     </div>
                   </div>
                 </div>
