@@ -298,11 +298,11 @@ export default function KuesionerPage() {
                   </div>
 
                   {/* Methodology card */}
-                  <div className="bg-surface-container border border-outline-variant rounded-xl p-5 flex items-start gap-4">
-                    <span className="material-symbols-outlined text-tertiary text-[24px] mt-0.5 flex-shrink-0">science</span>
+                  <div className="bg-surface-container border border-outline-variant rounded-xl p-3 md:p-5 flex items-start gap-2.5 md:gap-4">
+                    <span className="material-symbols-outlined text-tertiary text-[18px] md:text-[24px] mt-0.5 flex-shrink-0">science</span>
                     <div>
-                      <h3 className="text-sm font-bold text-on-surface mb-1">Metodologi</h3>
-                      <p className="text-sm text-on-surface-variant leading-relaxed">
+                      <h3 className="text-xs md:text-sm font-bold text-on-surface mb-0.5 md:mb-1">Metodologi</h3>
+                      <p className="text-[10px] md:text-sm text-on-surface-variant leading-relaxed">
                         Sistem ini menggunakan <em>Penjumlahan Skor Absolut (SVAS-6)</em> untuk menghitung
                         indeks keparahan kecanduan video pendek berdasarkan 6 kriteria inti yang divalidasi secara ilmiah.
                       </p>
@@ -310,13 +310,13 @@ export default function KuesionerPage() {
                   </div>
 
                   {/* Time estimate */}
-                  <div className="flex items-center justify-center gap-6 text-sm text-on-surface-variant">
-                    <span className="flex items-center gap-1.5">
-                      <span className="material-symbols-outlined text-[18px]">timer</span>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-xs md:text-sm text-on-surface-variant">
+                    <span className="flex items-center gap-1 md:gap-1.5">
+                      <span className="material-symbols-outlined text-[16px] md:text-[18px]">timer</span>
                       Estimasi: ~3 menit
                     </span>
-                    <span className="flex items-center gap-1.5">
-                      <span className="material-symbols-outlined text-[18px]">quiz</span>
+                    <span className="flex items-center gap-1 md:gap-1.5">
+                      <span className="material-symbols-outlined text-[16px] md:text-[18px]">quiz</span>
                       6 pertanyaan + 3 data pendukung
                     </span>
                   </div>
