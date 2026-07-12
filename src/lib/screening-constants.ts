@@ -46,7 +46,7 @@ export const SVAS_QUESTIONS = [
     id: 1,
     key: 'Q1_salience',
     dimension: 'Salience',
-    text: 'Aku sering kepikiran ingin menonton video pendek (Tiktok, Reels, Shorts). Padahal lagi nggak megang hp.',
+    text: 'Aku sering kepikiran buat nonton video pendek (Tiktok, Reels, Shorts). Padahal lagi nggak megang hp.',
     subtitle: 'Fokus Utama',
     contoh: 'Misalnya: Lagi makan atau ngerjain tugas, tapi pengen  nonton video Tiktok.',
   },
