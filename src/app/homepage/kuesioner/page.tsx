@@ -241,16 +241,16 @@ export default function KuesionerPage() {
               transition={{ duration: 0.35, ease: 'easeInOut' }}
             >
               {/* ── Step Header ────────────────────────────── */}
-              <div className="mb-6 md:mb-8">
-                <div className="flex items-center gap-3 mb-1.5 md:mb-2">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-primary text-[24px] md:text-[28px]">{info.icon}</span>
+              <div className="mb-5 md:mb-8">
+                <div className="flex items-center gap-2.5 md:gap-3 mb-1 md:mb-2">
+                  <div className="w-9 h-9 md:w-12 md:h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-primary text-[22px] md:text-[28px]">{info.icon}</span>
                   </div>
                   <div>
-                    <h1 className="text-2xl md:text-3xl font-bold text-on-surface leading-tight">{info.title}</h1>
+                    <h1 className="text-xl md:text-3xl font-bold text-on-surface leading-tight">{info.title}</h1>
                   </div>
                 </div>
-                <p className="text-sm md:text-lg text-on-surface-variant ml-[52px] md:ml-[60px]">{info.subtitle}</p>
+                <p className="text-xs md:text-lg text-on-surface-variant ml-[46px] md:ml-[60px]">{info.subtitle}</p>
               </div>
 
               {/* ══════════════════════════════════════════════════
@@ -381,16 +381,16 @@ export default function KuesionerPage() {
 
                       {/* Options */}
                       <div className="px-4 pb-4 md:px-5 md:pb-5">
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+                        <div className="grid grid-cols-1 md:grid-cols-5 gap-1.5 md:gap-2">
                           {SVAS_OPTIONS.map((opt) => {
                             const isSelected = svasScores[idx] === opt.value;
                             return (
                               <button
                                 key={opt.value}
                                 onClick={() => setSvasScore(idx, opt.value)}
-                                className={`relative flex flex-col items-center gap-1.5 p-2 md:p-3 rounded-xl border-2 transition-all duration-200 cursor-pointer group ${opt.value === 5 ? 'col-span-2 md:col-span-1' : ''} ${isSelected
-                                  ? 'border-current shadow-sm scale-[1.02]'
-                                  : 'border-transparent bg-surface-container hover:bg-surface-container-high hover:scale-[1.01]'
+                                className={`relative flex flex-row md:flex-col items-center justify-start md:justify-center gap-3 md:gap-1.5 px-3 py-2 md:p-3 rounded-lg md:rounded-xl border md:border-2 transition-all duration-200 cursor-pointer group ${isSelected
+                                  ? 'border-current shadow-sm md:scale-[1.02]'
+                                  : 'border-transparent bg-surface-container hover:bg-surface-container-high'
                                   }`}
                                 style={isSelected ? {
                                   color: opt.color,
@@ -431,9 +431,9 @@ export default function KuesionerPage() {
               {step === 'platform' && (
                 <div className="flex flex-col gap-6">
                   {/* Info banner */}
-                  <div className="bg-surface-container border border-outline-variant rounded-xl p-4 flex items-start gap-3">
-                    <span className="material-symbols-outlined text-tertiary text-[22px] mt-0.5 flex-shrink-0">info</span>
-                    <p className="text-base md:text-lg text-on-surface-variant leading-relaxed">
+                  <div className="bg-surface-container border border-outline-variant rounded-xl p-3 md:p-4 flex items-start gap-2.5 md:gap-3">
+                    <span className="material-symbols-outlined text-tertiary text-[20px] md:text-[22px] mt-0.5 flex-shrink-0">info</span>
+                    <p className="text-[11px] md:text-sm text-on-surface-variant leading-relaxed">
                       Data penggunaan platform hanya sebagai <strong>Informasi Pendukung</strong> saja.
                       S-VAS tetap menjadi faktor utama.
                     </p>
