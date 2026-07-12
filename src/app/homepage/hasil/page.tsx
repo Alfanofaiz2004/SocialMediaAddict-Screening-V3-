@@ -418,14 +418,6 @@ export default function HasilPage() {
     return (
       <div className="relative flex flex-col items-center justify-center w-full max-w-[340px] mx-auto mt-6 mb-2">
         <svg width="320" height="170" viewBox="0 0 320 170" className="overflow-visible">
-          <defs>
-            <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#10B981" />
-              <stop offset="50%" stopColor="#F59E0B" />
-              <stop offset="100%" stopColor="#EF4444" />
-            </linearGradient>
-          </defs>
-
           {/* Background Arc */}
           <path
             d={`M ${cx - radius} ${cy} A ${radius} ${radius} 0 0 1 ${cx + radius} ${cy}`}
@@ -436,15 +428,17 @@ export default function HasilPage() {
           />
 
           {/* Animated Foreground Arc */}
-          <path
+          <motion.path
             d={`M ${cx - radius} ${cy} A ${radius} ${radius} 0 0 1 ${cx + radius} ${cy}`}
             fill="none"
-            stroke="url(#scoreGradient)"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeDasharray={circumference}
             strokeDashoffset={animated ? targetOffset : circumference}
-            style={{ transition: 'stroke-dashoffset 2s cubic-bezier(0.175, 0.885, 0.32, 1.1)' }}
+            style={{ 
+              stroke: animatedColor, 
+              transition: 'stroke-dashoffset 2s cubic-bezier(0.175, 0.885, 0.32, 1.1)' 
+            }}
           />
 
           {/* Tick Markers */}
