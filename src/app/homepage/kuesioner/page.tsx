@@ -241,16 +241,16 @@ export default function KuesionerPage() {
               transition={{ duration: 0.35, ease: 'easeInOut' }}
             >
               {/* ── Step Header ────────────────────────────── */}
-              <div className="mb-8">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-primary text-[28px]">{info.icon}</span>
+              <div className="mb-6 md:mb-8">
+                <div className="flex items-center gap-3 mb-1.5 md:mb-2">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-primary text-[24px] md:text-[28px]">{info.icon}</span>
                   </div>
                   <div>
-                    <h1 className="text-3xl md:text-4xl font-bold text-on-surface leading-tight">{info.title}</h1>
+                    <h1 className="text-2xl md:text-3xl font-bold text-on-surface leading-tight">{info.title}</h1>
                   </div>
                 </div>
-                <p className="text-lg md:text-xl text-on-surface-variant ml-15 md:ml-[60px]">{info.subtitle}</p>
+                <p className="text-sm md:text-lg text-on-surface-variant ml-[52px] md:ml-[60px]">{info.subtitle}</p>
               </div>
 
               {/* ══════════════════════════════════════════════════
@@ -259,16 +259,16 @@ export default function KuesionerPage() {
               {step === 'intro' && (
                 <div className="flex flex-col gap-6">
                   {/* Welcome card */}
-                  <div className="bg-gradient-to-br from-primary/5 to-primary/[0.02] border border-primary/15 rounded-2xl p-6 md:p-8">
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <span className="material-symbols-outlined text-primary text-[32px]">waving_hand</span>
+                  <div className="bg-gradient-to-br from-primary/5 to-primary/[0.02] border border-primary/15 rounded-2xl p-4 md:p-6">
+                    <div className="flex items-start gap-3 md:gap-4 mb-4 md:mb-6">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <span className="material-symbols-outlined text-primary text-[24px] md:text-[28px]">waving_hand</span>
                       </div>
                       <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-on-surface mb-2">
+                        <h2 className="text-lg md:text-2xl font-bold text-on-surface mb-1 md:mb-2">
                           Halo{userName ? `, ${userName}` : ''}!
                         </h2>
-                        <p className="text-base text-on-surface-variant leading-relaxed">
+                        <p className="text-xs md:text-sm text-on-surface-variant leading-relaxed">
                           Kuesioner ini dirancang untuk mengukur tingkat kecanduan terhadap platform video berdurasi pendek
                           (TikTok, Instagram Reels, YouTube Shorts) menggunakan instrumen <strong>SVAS-6</strong>.
                         </p>
@@ -276,7 +276,7 @@ export default function KuesionerPage() {
                     </div>
 
                     {/* Instruction items */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
                       {[
                         { icon: 'quiz', text: 'Jawab 6 pertanyaan berdasarkan pengalaman 6 bulan terakhir.' },
                         { icon: 'tune', text: '5 pilihan jawaban dari "Tidak Pernah" hingga "Sangat Sering".' },
@@ -288,10 +288,10 @@ export default function KuesionerPage() {
                           initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }}
                           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                           transition={{ delay: 0.1 + i * 0.08 }}
-                          className="flex items-start gap-3 bg-surface-container-lowest/80 rounded-xl p-4 border border-outline-variant/50"
+                          className="flex items-start gap-2.5 bg-surface-container-lowest/80 rounded-xl p-3 border border-outline-variant/50"
                         >
-                          <span className="material-symbols-outlined text-primary text-[22px] mt-0.5">{item.icon}</span>
-                          <p className="text-sm text-on-surface-variant leading-relaxed">{item.text}</p>
+                          <span className="material-symbols-outlined text-primary text-[18px] md:text-[20px] mt-0.5">{item.icon}</span>
+                          <p className="text-[11px] md:text-xs text-on-surface-variant leading-relaxed">{item.text}</p>
                         </motion.div>
                       ))}
                     </div>
@@ -360,7 +360,7 @@ export default function KuesionerPage() {
                         }`}
                     >
                       {/* Question header */}
-                      <div className="p-5 pb-4">
+                      <div className="p-4 pb-2 md:p-5 md:pb-4">
                         <div className="flex items-start gap-3 mb-3">
                           <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0 ${svasScores[idx] !== -1 ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface-variant'
                             }`}>
@@ -371,24 +371,24 @@ export default function KuesionerPage() {
                             )}
                           </div>
                           <div className="flex-1">
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container rounded-md text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider mb-2">
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container rounded-md text-[10px] md:text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider mb-2">
                               {q.dimension}
                             </span>
-                            <h3 className="text-lg md:text-xl font-medium text-on-surface leading-relaxed">{q.text}</h3>
+                            <h3 className="text-base md:text-xl font-medium text-on-surface leading-relaxed">{q.text}</h3>
                           </div>
                         </div>
                       </div>
 
                       {/* Options */}
-                      <div className="px-5 pb-5">
-                        <div className="grid grid-cols-1 sm:grid-cols-5 gap-2">
+                      <div className="px-4 pb-4 md:px-5 md:pb-5">
+                        <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
                           {SVAS_OPTIONS.map((opt) => {
                             const isSelected = svasScores[idx] === opt.value;
                             return (
                               <button
                                 key={opt.value}
                                 onClick={() => setSvasScore(idx, opt.value)}
-                                className={`relative flex flex-col items-center gap-1.5 p-3 rounded-xl border-2 transition-all duration-200 cursor-pointer group ${isSelected
+                                className={`relative flex flex-col items-center gap-1.5 p-2 md:p-3 rounded-xl border-2 transition-all duration-200 cursor-pointer group ${opt.value === 5 ? 'col-span-2 md:col-span-1' : ''} ${isSelected
                                   ? 'border-current shadow-sm scale-[1.02]'
                                   : 'border-transparent bg-surface-container hover:bg-surface-container-high hover:scale-[1.01]'
                                   }`}
@@ -406,7 +406,7 @@ export default function KuesionerPage() {
                                     <div className="w-2 h-2 rounded-full bg-current" />
                                   )}
                                 </div>
-                                <span className={`text-sm md:text-base font-medium text-center leading-tight ${isSelected ? '' : 'text-on-surface-variant'
+                                <span className={`text-xs md:text-base font-medium text-center leading-tight ${isSelected ? '' : 'text-on-surface-variant'
                                   }`}>
                                   {opt.label}
                                 </span>
@@ -415,7 +415,7 @@ export default function KuesionerPage() {
                           })}
                         </div>
                         {q.contoh && (
-                          <div className="mt-4 p-3 bg-surface-container rounded-lg border-l-4 border-primary/40 text-sm text-on-surface-variant leading-relaxed">
+                          <div className="mt-3 md:mt-4 p-2.5 md:p-3 bg-surface-container rounded-lg border-l-4 border-primary/40 text-xs md:text-sm text-on-surface-variant leading-relaxed">
                             <i>{q.contoh}</i>
                           </div>
                         )}
@@ -440,7 +440,7 @@ export default function KuesionerPage() {
                   </div>
 
                   {/* Platform cards */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-3 md:gap-4">
                     {PLATFORM_CONFIG.map((config, i) => {
                       const pIcon = PLATFORM_ICONS[config.key] || { icon: 'apps', gradient: 'linear-gradient(135deg, #888 0%, #666 100%)' };
                       const val = platforms[config.key as keyof PlatformValues] || 0;
@@ -450,23 +450,32 @@ export default function KuesionerPage() {
                           initial={{ opacity: 0, y: 15, filter: 'blur(10px)' }}
                           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                           transition={{ delay: i * 0.08, duration: 0.3 }}
-                          className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-5 hover:border-outline transition-all group"
+                          className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-3 md:p-5 hover:border-outline transition-all group"
                         >
-                          <div className="flex items-center gap-3 mb-4">
+                          <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3 mb-3 md:mb-4">
                             <div
-                              className="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm"
+                              className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center text-white shadow-sm"
                               style={{ background: pIcon.gradient }}
                             >
-                              <span className="material-symbols-outlined text-[22px]">{pIcon.icon}</span>
+                              <span className="material-symbols-outlined text-[18px] md:text-[22px]">{pIcon.icon}</span>
                             </div>
                             <div>
-                              <h3 className="text-lg md:text-xl font-bold text-on-surface">{config.name}</h3>
-                              <p className="text-xs text-on-surface-variant">Jam per hari</p>
+                              <h3 className="text-sm md:text-xl font-bold text-on-surface leading-tight">{config.name}</h3>
+                              <p className="text-[9px] md:text-xs text-on-surface-variant">Jam / hari</p>
                             </div>
                           </div>
 
                           {/* Slider + number display */}
-                          <div className="flex items-center gap-4">
+                          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                            <div
+                              className="w-full text-center py-1.5 md:py-2 rounded-lg text-lg md:text-2xl font-bold transition-colors"
+                              style={{
+                                backgroundColor: config.bgColor,
+                                color: config.color,
+                              }}
+                            >
+                              {val.toFixed(1)} <span className="text-xs md:text-sm font-medium opacity-80">jam</span>
+                            </div>
                             <input
                               type="range"
                               min="0"
@@ -474,17 +483,8 @@ export default function KuesionerPage() {
                               step="0.5"
                               value={val}
                               onChange={(e) => setPlatformValue(config.key as keyof PlatformValues, parseFloat(e.target.value) || 0)}
-                              className="screening-slider flex-1"
+                              className="screening-slider w-full mt-2 md:mt-0"
                             />
-                            <div
-                              className="w-20 md:w-24 text-center py-2 rounded-lg text-xl md:text-2xl font-bold transition-colors"
-                              style={{
-                                backgroundColor: config.bgColor,
-                                color: config.color,
-                              }}
-                            >
-                              {val.toFixed(1)}
-                            </div>
                           </div>
                           <div className="flex justify-between mt-1.5 text-[10px] text-on-surface-variant">
                             <span>0 jam</span>
@@ -510,13 +510,13 @@ export default function KuesionerPage() {
                   ══════════════════════════════════════════════════ */}
               {step === 'sleep' && (
                 <div className="flex flex-col gap-6">
-                  <div className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-6">
+                  <div className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-4 md:p-6">
                     <div className="flex flex-col gap-6">
                       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                        <label className="text-lg md:text-xl font-medium text-on-surface" htmlFor="sleep-scale">
+                        <label className="text-base md:text-xl font-medium text-on-surface" htmlFor="sleep-scale">
                           Rata-rata jam tidur per malam
                         </label>
-                        <span className="inline-flex items-center justify-center px-3 py-1.5 rounded-full text-xs font-bold w-fit" style={{ backgroundColor: `${sleepInfo.color}15`, color: sleepInfo.color }}>
+                        <span className="inline-flex items-center justify-center px-2 py-1 md:px-3 md:py-1.5 rounded-full text-[10px] md:text-xs font-bold w-fit" style={{ backgroundColor: `${sleepInfo.color}15`, color: sleepInfo.color }}>
                           Status: {sleepInfo.text}
                         </span>
                       </div>
@@ -565,13 +565,13 @@ export default function KuesionerPage() {
                   ══════════════════════════════════════════════════ */}
               {step === 'productivity' && (
                 <div className="flex flex-col gap-6">
-                  <div className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-6">
+                  <div className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-4 md:p-6">
                     <div className="flex flex-col gap-6">
                       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                        <label className="text-lg md:text-xl font-medium text-on-surface" htmlFor="productivity-scale">
+                        <label className="text-base md:text-xl font-medium text-on-surface" htmlFor="productivity-scale">
                           Tingkat gangguan pada produktivitas
                         </label>
-                        <span className="inline-flex items-center justify-center px-3 py-1.5 rounded-full text-xs font-bold w-fit" style={{ backgroundColor: `${prodInfo.color}15`, color: prodInfo.color }}>
+                        <span className="inline-flex items-center justify-center px-2 py-1 md:px-3 md:py-1.5 rounded-full text-[10px] md:text-xs font-bold w-fit" style={{ backgroundColor: `${prodInfo.color}15`, color: prodInfo.color }}>
                           Status: {prodInfo.text}
                         </span>
                       </div>
