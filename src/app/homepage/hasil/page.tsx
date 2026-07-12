@@ -564,7 +564,7 @@ export default function HasilPage() {
                 <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#10B981]" /> 1-2 Normal</span>
                 <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#F59E0B]" /> 3 Waspada</span>
                 <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#F97316]" /> 4 Tinggi</span>
-                <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#EF4444]" /> 5 Kecanduan</span>
+                <span className="inline-flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-[#EF4444]" /> 5 Sangat Tinggi</span>
               </div>
             </div>
           </AnimatedSection>
