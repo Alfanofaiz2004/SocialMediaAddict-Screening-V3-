@@ -376,16 +376,7 @@ export default function HasilPage() {
     const targetOffset = circumference - (percentage / 100) * circumference;
 
     return (
-      <div className="relative flex flex-col items-center justify-center w-full max-w-[170px] md:max-w-[340px] mx-auto mt-2 md:mt-6 mb-1 md:mb-2">
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="font-label-md text-[9px] md:text-xs text-on-surface-variant uppercase tracking-[0.05em] md:tracking-[0.15em] mb-1 md:mb-4 font-semibold text-center leading-tight whitespace-nowrap"
-        >
-          Skor Ketergantungan
-        </motion.span>
-        
+      <div className="relative flex flex-col items-center justify-center w-full max-w-[200px] md:max-w-[340px] mx-auto mt-2 md:mt-6 mb-1 md:mb-2">
         <svg width="100%" height="100%" viewBox="0 0 320 170" className="overflow-visible">
           {/* Background Arc */}
           <path
@@ -427,10 +418,18 @@ export default function HasilPage() {
             initial={{ opacity: 0, y: 15, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="font-display-lg text-[32px] md:text-[64px] font-extrabold leading-none tracking-tight"
+            className="font-display-lg text-[32px] md:text-[64px] font-extrabold leading-none tracking-tight mb-1 md:mb-2"
             style={{ color: animatedColor }}
           >
             {rounded}
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            className="font-label-md text-[9px] md:text-xs text-on-surface-variant uppercase tracking-[0.05em] md:tracking-[0.15em] font-semibold text-center leading-tight whitespace-nowrap"
+          >
+            Skor Ketergantungan
           </motion.span>
         </div>
       </div>
@@ -483,17 +482,17 @@ export default function HasilPage() {
         </motion.div>
 
 
-        <div className="w-full px-6 md:px-12 py-8 md:py-12">
+        <div className="w-full px-4 md:px-12 py-8 md:py-12">
           <AnimatedSection className="w-full max-w-5xl mx-auto">
-            <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl md:rounded-3xl p-4 md:p-10 shadow-sm flex flex-row items-center gap-4 md:gap-12 pdf-avoid-break">
+            <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl md:rounded-3xl p-3 md:p-10 shadow-sm flex flex-row items-center gap-2 md:gap-12 pdf-avoid-break">
 
               {/* Left Side: Gauge Visualization */}
-              <div className="w-[45%] lg:w-[45%] flex justify-center flex-shrink-0">
+              <div className="w-[50%] lg:w-[45%] flex justify-center flex-shrink-0">
                 {renderGaugeScore()}
               </div>
 
               {/* Right Side: Status Banner Card */}
-              <div className="w-[55%] lg:w-[55%]">
+              <div className="w-[50%] lg:w-[55%]">
                 <div
                   className="rounded-xl md:rounded-2xl p-3 md:p-8 flex flex-col justify-center gap-2 md:gap-4 relative overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full"
                   style={{ backgroundColor: colorScheme.bg, border: `1px solid ${zoneInfo.color}40` }}
