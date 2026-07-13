@@ -8,6 +8,7 @@ import { ScreeningResult, UserInput, ZoneType } from '@/lib/screening-types';
 import { ZONES, DIMENSION_DETAILS } from '@/lib/screening-constants';
 import { CriteriaBarChart, PlatformBarChart, SVASRadarChart, DimensionAccordion } from '@/components/ResultVisualizations';
 import { motion, AnimatePresence, useMotionValue, useTransform, animate } from 'framer-motion';
+import { calculateSVAS6 } from '@/lib/svas-algorithm';
 
 // ─── Scroll-triggered animation wrapper ──────────────────────────────────────
 const fadeInUp = {
@@ -45,8 +46,8 @@ export default function HasilPage() {
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const animatedColor = useTransform(
     count,
-    [0, 50, 100],
-    ['#10B981', '#F59E0B', '#EF4444'] // Green -> Yellow -> Red
+    [0, 14, 15, 18, 19, 30],
+    ['#10B981', '#10B981', '#F59E0B', '#F59E0B', '#EF4444', '#EF4444'] 
   );
 
   const saveToServer = async (userName: string, inputData: UserInput, resultData: ScreeningResult) => {
@@ -308,10 +309,12 @@ export default function HasilPage() {
     checkUser();
 
     try {
-      const parsedResult = storedResult ? JSON.parse(storedResult) : null;
       const parsedInput = storedInput ? JSON.parse(storedInput) : null;
-      if (!parsedResult || !parsedInput) throw new Error("No data");
-      setResult(parsedResult);
+      if (!parsedInput) throw new Error("No data");
+      
+      // Hitung ulang result dengan algoritma terbaru, abaikan zone dari cache lama
+      const freshResult = calculateSVAS6(parsedInput);
+      setResult(freshResult);
       setInput(parsedInput);
       setTimeout(() => setAnimated(true), 200);
     } catch {
@@ -321,7 +324,7 @@ export default function HasilPage() {
 
   useEffect(() => {
     if (result && animated) {
-      animate(count, result.detoxPercentage, {
+      animate(count, result.svasTotal, {
         duration: 2,
         ease: [0.175, 0.885, 0.32, 1.1],
       });
@@ -365,7 +368,7 @@ export default function HasilPage() {
 
   // Premium Gauge Score
   const renderGaugeScore = () => {
-    const percentage = result.detoxPercentage;
+    const percentage = (result.svasTotal / 30) * 100;
     const radius = 130;
     const cx = 160;
     const cy = 150;
@@ -421,11 +424,11 @@ export default function HasilPage() {
               initial={{ opacity: 0, y: 15, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="font-display-lg text-[32px] md:text-[64px] font-extrabold leading-none tracking-tight flex items-center"
+              className="font-display-lg text-[32px] md:text-[64px] font-extrabold leading-none tracking-tight flex items-baseline"
               style={{ color: animatedColor }}
             >
               <motion.span>{rounded}</motion.span>
-              <span>%</span>
+              <span className="text-xl md:text-3xl opacity-50 ml-1">/30</span>
             </motion.span>
           </div>
         </div>

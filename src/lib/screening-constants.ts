@@ -2,11 +2,10 @@ import { ZoneInfo, ZoneType, Recommendation } from './screening-types';
 
 // ============================================================
 // Zona Klasifikasi (3 Zona — SVAS-6)
-// Cut-off point: 15 (Katsiroumpa et al., 2025)
 // Total Skor: 6 - 30
-// < 15: NORMAL
-// 15 - 22: BERISIKO
-// 23 - 30: KECANDUAN_TINGGI
+// 6 - 14: NORMAL (Sehat / Low Risk)
+// 15 - 18: BERISIKO (Moderate Risk)
+// 19 - 30: KECANDUAN_TINGGI (High Risk / Problematic)
 // ============================================================
 export const ZONES: Record<ZoneType, ZoneInfo> = {
   NORMAL: {
@@ -33,7 +32,7 @@ export const ZONES: Record<ZoneType, ZoneInfo> = {
     bgColor: 'rgba(239, 68, 68, 0.08)',
     borderColor: 'rgba(239, 68, 68, 0.25)',
     textColor: '#7f1d1d',
-    description: 'Indikasi kuat adanya kecanduan media sosial. Sangat disarankan untuk segera melakukan intervensi atau Pengurangan Penggunaan (Digital Detox).',
+    description: 'Kamu memiliki Indikasi adanya kecanduan konsumsi video pendek. Sangat disarankan untuk segera melakukan intervensi atau Pengurangan Penggunaan (Digital Detox).',
     emoji: '🔴',
   },
 };
